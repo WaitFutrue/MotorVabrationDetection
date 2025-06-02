@@ -1,0 +1,67 @@
+﻿$(document).ready(function () {
+    var trigger = $('.hamburger'),
+        overlay = $('.overlay'),
+        isClosed = false;
+    trigger.click(function () {
+        hamburger_cross();
+    });
+    function hamburger_cross() {
+        if (isClosed == true) {
+            overlay.hide();
+            trigger.removeClass('is-open');
+            trigger.addClass('is-closed');
+            isClosed = false;
+        } else {
+            overlay.show();
+            trigger.removeClass('is-closed');
+            trigger.addClass('is-open');
+            isClosed = true;
+        }
+    }
+    $('[data-toggle="offcanvas"]').click(function () {
+        $('#menu').toggleClass('toggled');
+    });
+
+    //顶部菜单滚动浮动
+    $(window).scroll(function () {
+        if ($(window).width() > 991) {
+            if ($(document).scrollTop() > 0) {
+                $("#header").addClass("fix_show");//导航浮动
+                var scroll = $(window).scrollTop() / 1.2;
+                $("#bframe .img").css({ "background-position-y": scroll });
+            } else {
+                $("#header").removeClass("fix_show");//导航取消浮动
+            }
+        }
+    })
+    //下拉能点击链接
+    $(document).on("click", ".dropdown-toggle", function () {
+        if ($(this).attr('href')) window.location = $(this).attr('href');
+    });
+    //点击下拉变hover
+    if ($(window).width() > 991) {
+        $('li.dropdown').mouseover(function () {
+            $(this).addClass('open');
+        }).mouseout(function () { $(this).removeClass('open'); });
+    };
+    //左侧菜单栏
+    if ($(window).width() < 992) {
+        $(".left_menu .lbt").on("click", function () {
+            $(this).siblings(".lmb").find("#lnr>ul>li").slideToggle();
+        })
+    }
+    //搜索框
+    $("#search>a").on("click", function () {
+        $("#sform").slideToggle();
+    })
+});
+
+//邮箱验证
+function Isyx(yx) {
+    var reyx = /^([a-zA-Z0-9_-])+@([a-zA-Z0-9_-])+(.[a-zA-Z0-9_-])+/;
+    return (reyx.test(yx));
+}
+//返回顶部
+function GoTop() {
+    $('body,html').animate({ scrollTop: 0 }, 1000);
+}

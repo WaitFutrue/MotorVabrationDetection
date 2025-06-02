@@ -1,0 +1,1373 @@
+<!DOCTYPE html>
+<!-- saved from url=(0048)https://www.cnblogs.com/qsyll0916/p/8030379.html -->
+<html lang="zh-cn" style="--olcb-folder-code-block-max-height: 80vh; --cnb-code-bg: rgb(245, 245, 245); --cnb-code-font-size: 12px; --cnb-code-color: rgb(68, 68, 68);"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style data-vc-order="prependQueue" data-css-hash="1byatnd" data-token-hash="mmblq1">:where(.css-1p3hq3p) a{color:#1677ff;text-decoration:none;background-color:transparent;outline:none;cursor:pointer;transition:color 0.3s;-webkit-text-decoration-skip:objects;}:where(.css-1p3hq3p) a:hover{color:#69b1ff;}:where(.css-1p3hq3p) a:active{color:#0958d9;}:where(.css-1p3hq3p) a:active,:where(.css-1p3hq3p) a:hover{text-decoration:none;outline:0;}:where(.css-1p3hq3p) a:focus{text-decoration:none;outline:0;}:where(.css-1p3hq3p) a[disabled]{color:rgba(0, 0, 0, 0.25);cursor:not-allowed;}</style><style data-vc-order="prependQueue" data-css-hash="1n2woiz" data-token-hash="mmblq1">:where(.css-1p3hq3p)[class^="ant-tooltip"],:where(.css-1p3hq3p)[class*=" ant-tooltip"]{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,'Noto Sans',sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol','Noto Color Emoji';font-size:14px;box-sizing:border-box;}:where(.css-1p3hq3p)[class^="ant-tooltip"]::before,:where(.css-1p3hq3p)[class*=" ant-tooltip"]::before,:where(.css-1p3hq3p)[class^="ant-tooltip"]::after,:where(.css-1p3hq3p)[class*=" ant-tooltip"]::after{box-sizing:border-box;}:where(.css-1p3hq3p)[class^="ant-tooltip"] [class^="ant-tooltip"],:where(.css-1p3hq3p)[class*=" ant-tooltip"] [class^="ant-tooltip"],:where(.css-1p3hq3p)[class^="ant-tooltip"] [class*=" ant-tooltip"],:where(.css-1p3hq3p)[class*=" ant-tooltip"] [class*=" ant-tooltip"]{box-sizing:border-box;}:where(.css-1p3hq3p)[class^="ant-tooltip"] [class^="ant-tooltip"]::before,:where(.css-1p3hq3p)[class*=" ant-tooltip"] [class^="ant-tooltip"]::before,:where(.css-1p3hq3p)[class^="ant-tooltip"] [class*=" ant-tooltip"]::before,:where(.css-1p3hq3p)[class*=" ant-tooltip"] [class*=" ant-tooltip"]::before,:where(.css-1p3hq3p)[class^="ant-tooltip"] [class^="ant-tooltip"]::after,:where(.css-1p3hq3p)[class*=" ant-tooltip"] [class^="ant-tooltip"]::after,:where(.css-1p3hq3p)[class^="ant-tooltip"] [class*=" ant-tooltip"]::after,:where(.css-1p3hq3p)[class*=" ant-tooltip"] [class*=" ant-tooltip"]::after{box-sizing:border-box;}:where(.css-1p3hq3p).ant-tooltip{box-sizing:border-box;margin:0;padding:0;color:rgba(0, 0, 0, 0.88);font-size:14px;line-height:1.5714285714285714;list-style:none;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,'Noto Sans',sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol','Noto Color Emoji';position:absolute;z-index:1070;display:block;max-width:250px;visibility:visible;--antd-arrow-background-color:rgba(0, 0, 0, 0.85);}:where(.css-1p3hq3p).ant-tooltip{width:max-content;width:intrinsic;}:where(.css-1p3hq3p).ant-tooltip-hidden{display:none;}:where(.css-1p3hq3p).ant-tooltip .ant-tooltip-inner{min-width:32px;min-height:32px;padding:6px 8px;color:#fff;text-align:start;text-decoration:none;word-wrap:break-word;background-color:rgba(0, 0, 0, 0.85);border-radius:6px;box-shadow:0 6px 16px 0 rgba(0, 0, 0, 0.08),0 3px 6px -4px rgba(0, 0, 0, 0.12),0 9px 28px 8px rgba(0, 0, 0, 0.05);}:where(.css-1p3hq3p).ant-tooltip-placement-left .ant-tooltip-inner,:where(.css-1p3hq3p).ant-tooltip-placement-leftTop .ant-tooltip-inner,:where(.css-1p3hq3p).ant-tooltip-placement-leftBottom .ant-tooltip-inner,:where(.css-1p3hq3p).ant-tooltip-placement-right .ant-tooltip-inner,:where(.css-1p3hq3p).ant-tooltip-placement-rightTop .ant-tooltip-inner,:where(.css-1p3hq3p).ant-tooltip-placement-rightBottom .ant-tooltip-inner{border-radius:6px;}:where(.css-1p3hq3p).ant-tooltip .ant-tooltip-content{position:relative;}:where(.css-1p3hq3p).ant-tooltip.ant-tooltip-blue .ant-tooltip-inner{background-color:#1677ff;}:where(.css-1p3hq3p).ant-tooltip.ant-tooltip-blue .ant-tooltip-arrow{--antd-arrow-background-color:#1677ff;}:where(.css-1p3hq3p).ant-tooltip.ant-tooltip-purple .ant-tooltip-inner{background-color:#722ed1;}:where(.css-1p3hq3p).ant-tooltip.ant-tooltip-purple .ant-tooltip-arrow{--antd-arrow-background-color:#722ed1;}:where(.css-1p3hq3p).ant-tooltip.ant-tooltip-cyan .ant-tooltip-inner{background-color:#13c2c2;}:where(.css-1p3hq3p).ant-tooltip.ant-tooltip-cyan .ant-tooltip-arrow{--antd-arrow-background-color:#13c2c2;}:where(.css-1p3hq3p).ant-tooltip.ant-tooltip-green .ant-tooltip-inner{background-color:#52c41a;}:where(.css-1p3hq3p).ant-tooltip.ant-tooltip-green .ant-tooltip-arrow{--antd-arrow-background-color:#52c41a;}:where(.css-1p3hq3p).ant-tooltip.ant-tooltip-magenta .ant-tooltip-inner{background-color:#eb2f96;}:where(.css-1p3hq3p).ant-tooltip.ant-tooltip-magenta .ant-tooltip-arrow{--antd-arrow-background-color:#eb2f96;}:where(.css-1p3hq3p).ant-tooltip.ant-tooltip-pink .ant-tooltip-inner{background-color:#eb2f96;}:where(.css-1p3hq3p).ant-tooltip.ant-tooltip-pink .ant-tooltip-arrow{--antd-arrow-background-color:#eb2f96;}:where(.css-1p3hq3p).ant-tooltip.ant-tooltip-red .ant-tooltip-inner{background-color:#f5222d;}:where(.css-1p3hq3p).ant-tooltip.ant-tooltip-red .ant-tooltip-arrow{--antd-arrow-background-color:#f5222d;}:where(.css-1p3hq3p).ant-tooltip.ant-tooltip-orange .ant-tooltip-inner{background-color:#fa8c16;}:where(.css-1p3hq3p).ant-tooltip.ant-tooltip-orange .ant-tooltip-arrow{--antd-arrow-background-color:#fa8c16;}:where(.css-1p3hq3p).ant-tooltip.ant-tooltip-yellow .ant-tooltip-inner{background-color:#fadb14;}:where(.css-1p3hq3p).ant-tooltip.ant-tooltip-yellow .ant-tooltip-arrow{--antd-arrow-background-color:#fadb14;}:where(.css-1p3hq3p).ant-tooltip.ant-tooltip-volcano .ant-tooltip-inner{background-color:#fa541c;}:where(.css-1p3hq3p).ant-tooltip.ant-tooltip-volcano .ant-tooltip-arrow{--antd-arrow-background-color:#fa541c;}:where(.css-1p3hq3p).ant-tooltip.ant-tooltip-geekblue .ant-tooltip-inner{background-color:#2f54eb;}:where(.css-1p3hq3p).ant-tooltip.ant-tooltip-geekblue .ant-tooltip-arrow{--antd-arrow-background-color:#2f54eb;}:where(.css-1p3hq3p).ant-tooltip.ant-tooltip-lime .ant-tooltip-inner{background-color:#a0d911;}:where(.css-1p3hq3p).ant-tooltip.ant-tooltip-lime .ant-tooltip-arrow{--antd-arrow-background-color:#a0d911;}:where(.css-1p3hq3p).ant-tooltip.ant-tooltip-gold .ant-tooltip-inner{background-color:#faad14;}:where(.css-1p3hq3p).ant-tooltip.ant-tooltip-gold .ant-tooltip-arrow{--antd-arrow-background-color:#faad14;}:where(.css-1p3hq3p).ant-tooltip-rtl{direction:rtl;}:where(.css-1p3hq3p).ant-tooltip .ant-tooltip-arrow{position:absolute;z-index:1;display:block;pointer-events:none;width:16px;height:16px;overflow:hidden;}:where(.css-1p3hq3p).ant-tooltip .ant-tooltip-arrow::after{content:"";position:absolute;width:8.970562748477143px;height:8.970562748477143px;bottom:0;inset-inline:0;margin:auto;border-radius:0 0 2px 0;transform:translateY(50%) rotate(-135deg);box-shadow:3px 3px 7px rgba(0, 0, 0, 0.1);z-index:0;background:transparent;}:where(.css-1p3hq3p).ant-tooltip .ant-tooltip-arrow::before{position:absolute;bottom:0;inset-inline-start:0;width:16px;height:8px;background:var(--antd-arrow-background-color);clip-path:polygon(1.6568542494923806px 100%, 50% 1.6568542494923806px, 14.34314575050762px 100%, 1.6568542494923806px 100%);clip-path:path('M 0 8 A 4 4 0 0 0 2.82842712474619 6.82842712474619 L 6.585786437626905 3.0710678118654755 A 2 2 0 0 1 9.414213562373096 3.0710678118654755 L 13.17157287525381 6.82842712474619 A 4 4 0 0 0 16 8 Z');content:"";}:where(.css-1p3hq3p).ant-tooltip .ant-tooltip-arrow:before{background:var(--antd-arrow-background-color);}:where(.css-1p3hq3p).ant-tooltip-placement-top .ant-tooltip-arrow,:where(.css-1p3hq3p).ant-tooltip-placement-topLeft .ant-tooltip-arrow,:where(.css-1p3hq3p).ant-tooltip-placement-topRight .ant-tooltip-arrow{bottom:0;transform:translateY(100%) rotate(180deg);}:where(.css-1p3hq3p).ant-tooltip-placement-top .ant-tooltip-arrow{left:50%;transform:translateX(-50%) translateY(100%) rotate(180deg);}:where(.css-1p3hq3p).ant-tooltip-placement-topLeft .ant-tooltip-arrow{left:6px;}:where(.css-1p3hq3p).ant-tooltip-placement-topRight .ant-tooltip-arrow{right:6px;}:where(.css-1p3hq3p).ant-tooltip-placement-bottom .ant-tooltip-arrow,:where(.css-1p3hq3p).ant-tooltip-placement-bottomLeft .ant-tooltip-arrow,:where(.css-1p3hq3p).ant-tooltip-placement-bottomRight .ant-tooltip-arrow{top:0;transform:translateY(-100%);}:where(.css-1p3hq3p).ant-tooltip-placement-bottom .ant-tooltip-arrow{left:50%;transform:translateX(-50%) translateY(-100%);}:where(.css-1p3hq3p).ant-tooltip-placement-bottomLeft .ant-tooltip-arrow{left:6px;}:where(.css-1p3hq3p).ant-tooltip-placement-bottomRight .ant-tooltip-arrow{right:6px;}:where(.css-1p3hq3p).ant-tooltip-placement-left .ant-tooltip-arrow,:where(.css-1p3hq3p).ant-tooltip-placement-leftTop .ant-tooltip-arrow,:where(.css-1p3hq3p).ant-tooltip-placement-leftBottom .ant-tooltip-arrow{right:0;transform:translateX(100%) rotate(90deg);}:where(.css-1p3hq3p).ant-tooltip-placement-left .ant-tooltip-arrow{top:50%;transform:translateY(-50%) translateX(100%) rotate(90deg);}:where(.css-1p3hq3p).ant-tooltip-placement-leftTop .ant-tooltip-arrow{top:2px;}:where(.css-1p3hq3p).ant-tooltip-placement-leftBottom .ant-tooltip-arrow{bottom:2px;}:where(.css-1p3hq3p).ant-tooltip-placement-right .ant-tooltip-arrow,:where(.css-1p3hq3p).ant-tooltip-placement-rightTop .ant-tooltip-arrow,:where(.css-1p3hq3p).ant-tooltip-placement-rightBottom .ant-tooltip-arrow{left:0;transform:translateX(-100%) rotate(-90deg);}:where(.css-1p3hq3p).ant-tooltip-placement-right .ant-tooltip-arrow{top:50%;transform:translateY(-50%) translateX(-100%) rotate(-90deg);}:where(.css-1p3hq3p).ant-tooltip-placement-rightTop .ant-tooltip-arrow{top:2px;}:where(.css-1p3hq3p).ant-tooltip-placement-rightBottom .ant-tooltip-arrow{bottom:2px;}:where(.css-1p3hq3p).ant-tooltip-placement-topLeft:not(:where(.css-1p3hq3p).ant-tooltip-arrow-hidden),:where(.css-1p3hq3p).ant-tooltip-placement-top:not(:where(.css-1p3hq3p).ant-tooltip-arrow-hidden),:where(.css-1p3hq3p).ant-tooltip-placement-topRight:not(:where(.css-1p3hq3p).ant-tooltip-arrow-hidden){padding-bottom:12px;}:where(.css-1p3hq3p).ant-tooltip-placement-bottomLeft:not(:where(.css-1p3hq3p).ant-tooltip-arrow-hidden),:where(.css-1p3hq3p).ant-tooltip-placement-bottom:not(:where(.css-1p3hq3p).ant-tooltip-arrow-hidden),:where(.css-1p3hq3p).ant-tooltip-placement-bottomRight:not(:where(.css-1p3hq3p).ant-tooltip-arrow-hidden){padding-top:12px;}:where(.css-1p3hq3p).ant-tooltip-placement-leftTop:not(:where(.css-1p3hq3p).ant-tooltip-arrow-hidden),:where(.css-1p3hq3p).ant-tooltip-placement-left:not(:where(.css-1p3hq3p).ant-tooltip-arrow-hidden),:where(.css-1p3hq3p).ant-tooltip-placement-leftBottom:not(:where(.css-1p3hq3p).ant-tooltip-arrow-hidden){padding-right:12px;}:where(.css-1p3hq3p).ant-tooltip-placement-rightTop:not(:where(.css-1p3hq3p).ant-tooltip-arrow-hidden),:where(.css-1p3hq3p).ant-tooltip-placement-right:not(:where(.css-1p3hq3p).ant-tooltip-arrow-hidden),:where(.css-1p3hq3p).ant-tooltip-placement-rightBottom:not(:where(.css-1p3hq3p).ant-tooltip-arrow-hidden){padding-left:12px;}:where(.css-1p3hq3p).ant-tooltip-pure{position:relative;max-width:none;}:where(.css-1p3hq3p).ant-zoom-big-fast-enter,:where(.css-1p3hq3p).ant-zoom-big-fast-appear{animation-duration:0.1s;animation-fill-mode:both;animation-play-state:paused;}:where(.css-1p3hq3p).ant-zoom-big-fast-leave{animation-duration:0.1s;animation-fill-mode:both;animation-play-state:paused;}:where(.css-1p3hq3p).ant-zoom-big-fast-enter.ant-zoom-big-fast-enter-active,:where(.css-1p3hq3p).ant-zoom-big-fast-appear.ant-zoom-big-fast-appear-active{animation-name:css-1p3hq3p-antZoomBigIn;animation-play-state:running;}:where(.css-1p3hq3p).ant-zoom-big-fast-leave.ant-zoom-big-fast-leave-active{animation-name:css-1p3hq3p-antZoomBigOut;animation-play-state:running;pointer-events:none;}:where(.css-1p3hq3p).ant-zoom-big-fast-enter,:where(.css-1p3hq3p).ant-zoom-big-fast-appear{transform:scale(0);opacity:0;animation-timing-function:cubic-bezier(0.08, 0.82, 0.17, 1);}:where(.css-1p3hq3p).ant-zoom-big-fast-enter-prepare,:where(.css-1p3hq3p).ant-zoom-big-fast-appear-prepare{transform:none;}:where(.css-1p3hq3p).ant-zoom-big-fast-leave{animation-timing-function:cubic-bezier(0.78, 0.14, 0.15, 0.86);}</style><style data-vc-order="prependQueue" data-css-hash="_effect-css-1p3hq3p-antZoomBigIn">@keyframes css-1p3hq3p-antZoomBigIn{0%{transform:scale(0.8);opacity:0;}100%{transform:scale(1);opacity:1;}}</style><style data-vc-order="prependQueue" data-css-hash="_effect-css-1p3hq3p-antZoomBigOut">@keyframes css-1p3hq3p-antZoomBigOut{0%{transform:scale(1);}100%{transform:scale(0.8);opacity:0;}}</style>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="referrer" content="origin-when-cross-origin">
+    <meta name="keywords" content="基础还是51">
+    <meta name="description" content="前几天做了6050原始数据的串口输出和上位机波形的查看。这篇博客我们来看一下对原始数据的处理。 任务：利用STC89C52RC对MPU6050原始数据进行滤波与姿态融合。 首先我摘抄了一段别人在昨晚这个实验的写的最后总结。1.尽量不要用MPU6050内置的LPF滤波。虽然相比于原始加速度计输出，该L">
+    <meta property="og:description" content="前几天做了6050原始数据的串口输出和上位机波形的查看。这篇博客我们来看一下对原始数据的处理。 任务：利用STC89C52RC对MPU6050原始数据进行滤波与姿态融合。 首先我摘抄了一段别人在昨晚这个实验的写的最后总结。1.尽量不要用MPU6050内置的LPF滤波。虽然相比于原始加速度计输出，该L">
+    <meta http-equiv="Cache-Control" content="no-transform">
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>MPU6050滤波、姿态融合（一阶互补、卡尔曼） - Andrew_qian - 博客园</title>
+    <link rel="icon" id="favicon" href="https://assets.cnblogs.com/favicon_v3_2.ico" type="image/x-icon">
+    <link rel="canonical" href="https://www.cnblogs.com/qsyll0916/p/8030379.html">
+    
+    <style>#home :not(.cnblogs_code):not(.cnblogs_Highlighter)>pre:not([highlighted]):not([class*="brush:"]) code:not(.hljs), :not(.cnblogs_code):not(.cnblogs_Highlighter)>pre:not([highlighted]):not([class*="brush:"]) code:not(.hljs) {background: rgb(245, 245, 245);
+        padding: 12px;
+        border: 0.666667px solid rgb(204, 204, 204);
+        border-radius: 3px;
+        border-color: transparent;
+        color: rgb(68, 68, 68);
+        font-family: "Courier New", sans-serif;
+        font-size: 12px</style><link rel="stylesheet" href="./MPU6050滤波、姿态融合（一阶互补、卡尔曼） - Andrew_qian - 博客园_files/blog-common.min.css">
+    
+
+    <link id="MainCss" rel="stylesheet" href="./MPU6050滤波、姿态融合（一阶互补、卡尔曼） - Andrew_qian - 博客园_files/bundle-codinglife.min.css">
+        <link id="highlighter-theme-cnblogs" type="text/css" rel="stylesheet" href="./MPU6050滤波、姿态融合（一阶互补、卡尔曼） - Andrew_qian - 博客园_files/cnblogs.css">
+    
+    
+    <link id="mobile-style" media="only screen and (max-width: 767px)" type="text/css" rel="stylesheet" href="./MPU6050滤波、姿态融合（一阶互补、卡尔曼） - Andrew_qian - 博客园_files/bundle-codinglife-mobile.min.css">
+    
+    <link type="application/rss+xml" rel="alternate" href="https://www.cnblogs.com/qsyll0916/rss">
+    <link type="application/rsd+xml" rel="EditURI" href="https://www.cnblogs.com/qsyll0916/rsd.xml">
+    <link type="application/wlwmanifest+xml" rel="wlwmanifest" href="https://www.cnblogs.com/qsyll0916/wlwmanifest.xml">
+    
+    <script type="text/javascript" src="./MPU6050滤波、姿态融合（一阶互补、卡尔曼） - Andrew_qian - 博客园_files/encoder.js.下载"></script><script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "@id": "https://www.cnblogs.com/qsyll0916/p/8030379.html",
+      "headline": "MPU6050滤波、姿态融合（一阶互补、卡尔曼）",
+      "description": "前几天做了6050原始数据的串口输出和上位机波形的查看。这篇博客我们来看一下对原始数据的处理。 任务：利用STC89C52RC对MPU6050原始数据进行滤波与姿态融合。 首先我摘抄了一段别人在昨晚这个实验的写的最后总结。1.尽量不要用MPU6050内置的LPF滤波。虽然相比于原始加速度计输出，该L",
+      "image": [
+        
+      ],
+      "author": {
+        "@type": "Person",
+        "@id": "https://www.cnblogs.com/qsyll0916/",
+        "name": "Andrew_qian",
+        "url": "https://www.cnblogs.com/qsyll0916/"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "@id": "https://www.cnblogs.com/",
+        "name": "博客园",
+        "url": "https://www.cnblogs.com/"
+      },
+      "datePublished": "2017-12-12T23:44:00.0000000&#x2B;08:00",
+      "dateModified": "2017-12-12T23:44:00.0000000&#x2B;08:00",
+      "wordCount": "25549",
+      "isPartOf": {
+        "@type": "Blog",
+        "@id": "https://www.cnblogs.com/qsyll0916/",
+        "name": "Andrew_qian",
+        "publisher": {
+          "@type": "Organization",
+          "@id": "https://www.cnblogs.com/",
+          "name": "博客园"
+        }
+      }
+    }
+    </script>
+
+    <script>
+        var currentBlogId = 324032;
+        var currentBlogApp = 'qsyll0916';
+        var isLogined = false;
+        var isBlogOwner = false;
+        var skinName = 'CodingLife';
+        var visitorUserId = '';
+        var hasCustomScript = false;
+        window.cb_enable_mathjax = false;
+        window.mathEngine = 0;
+        window.codeHighlightEngine = 1;
+        window.enableCodeLineNumber = false;
+        window.codeHighlightTheme = 'cnblogs';
+        window.darkModeCodeHighlightTheme = 'vs2015';
+        window.isDarkCodeHighlightTheme = false;
+        window.isDarkModeCodeHighlightThemeDark = true;
+        window.isDisableCodeHighlighter = false;
+        window.enableCodeThemeTypeFollowSystem = false;
+        window.enableMacStyleCodeBlock = false;
+    </script>
+        <script>
+            window.currentPostId = 8030379;
+            window.currentPostDateAdded = '2017-12-12 23:44';
+        </script>
+    <script src="./MPU6050滤波、姿态融合（一阶互补、卡尔曼） - Andrew_qian - 博客园_files/jquery-3.3.1.min.js.下载"></script>
+    <script src="./MPU6050滤波、姿态融合（一阶互补、卡尔曼） - Andrew_qian - 博客园_files/blog-common.min.js.下载"></script><style>.medium-zoom-overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 300ms;
+  will-change: opacity;
+}
+
+.medium-zoom--opened .medium-zoom-overlay {
+  cursor: pointer;
+  cursor: zoom-out;
+  opacity: 1;
+}
+
+.medium-zoom-image {
+  cursor: pointer;
+  cursor: zoom-in;
+  /*
+    The `transition` is marked as "!important" for the animation to happen
+    even though it's overriden by another inline `transition` style attribute.
+
+    This is problematic with frameworks that generate inline styles on their
+    images (e.g. Gatsby).
+
+    See https://github.com/francoischalifour/medium-zoom/issues/110
+   */
+  transition: transform 300ms cubic-bezier(0.2, 0, 0.2, 1) !important;
+}
+
+.medium-zoom-image--hidden {
+  visibility: hidden;
+}
+
+.medium-zoom-image--opened {
+  position: relative;
+  cursor: pointer;
+  cursor: zoom-out;
+  will-change: transform;
+}
+</style><script id="hljs-script" src="./MPU6050滤波、姿态融合（一阶互补、卡尔曼） - Andrew_qian - 博客园_files/highlight.min.js.下载" type="text/javascript" async=""></script>
+    
+<meta property="og:image" content="https://images2017.cnblogs.com/blog/1083998/201712/1083998-20171212233009035-1974215313.png"></head>
+<body class="skin-codinglife has-navbar has-bannerbar">
+    <a name="top"></a>
+        <a href="https://www.trae.com.cn/?utm_source=juejin&amp;utm_medium=juejin_trae&amp;utm_campaign=bokeyuan" onclick="countCreativeClicks(&#39;C0-trae&#39;)" target="_blank" rel="nofollow">
+            <div class="imagebar forpc" style="background-size: contain;background-image: url(https://img2024.cnblogs.com/blog/35695/202503/35695-20250307203035087-239996970.jpg);">
+                <img src="./MPU6050滤波、姿态融合（一阶互补、卡尔曼） - Andrew_qian - 博客园_files/35695-20250307202753375-1225331981.jpg" style="" onload="countCreativeImpressions(&#39;C0-trae&#39;)">
+                
+                
+                <span id="c0_impression" style="display:none"></span>
+            </div>
+        </a>
+        <div id="imagebar" class="imagebar-mobile imagebar-text-mobile formobile">
+                <a href="https://www.doubao.com/?channel=cnblogs&amp;source=hw_db_cnblogs" onclick="countCreativeClicks(&#39;M2-字节-豆包&#39;)" rel="nofollow">
+                    <img src="./MPU6050滤波、姿态融合（一阶互补、卡尔曼） - Andrew_qian - 博客园_files/35695-20241201073014811-1847930772.jpg" alt="" onload="countCreativeImpressionsOnMobile(&#39;M2-字节-豆包&#39;)">
+                    <span id="m2_impression" style="display:none"></span>
+                </a>
+        </div>
+    <div id="top_nav" class="navbar forpc">
+        <nav id="nav_main" class="navbar-main">
+            <ul id="nav_left" class="navbar-list navbar-left">
+                <li class="navbar-branding">                    
+                    <a href="https://www.cnblogs.com/" title="开发者的网上家园" role="banner">
+                        <img src="./MPU6050滤波、姿态融合（一阶互补、卡尔曼） - Andrew_qian - 博客园_files/logo.svg" alt="博客园logo">
+                    </a>
+                </li>
+                    <li style="margin-left: 36px;"><a href="https://cnblogs.vip/buy?modalOpen=true&amp;buyingProduct=vip-lifetime">联合会员</a></li>
+                    <li><a href="https://cnblogs.vip/store">周边</a></li>
+                <li>
+                    <a href="https://news.cnblogs.com/" onclick="countClicks(&#39;nav&#39;, &#39;skin-navbar-news&#39;)">新闻</a>
+                </li>
+                <li>
+                    <a href="https://q.cnblogs.com/" onclick="countClicks(&#39;nav&#39;, &#39;skin-navbar-q&#39;)">博问</a>
+                </li>
+                <li>
+                    <a href="https://ing.cnblogs.com/" onclick="countClicks(&#39;nav&#39;, &#39;skin-navbar-ing&#39;)">闪存</a>
+                </li>
+                <li><a href="https://www.cnblogs.com/cmt/p/18341478">赞助商</a></li>
+                <li><a href="https://chat2db-ai.com/" target="_blank" onclick="countClicks(&#39;nav&#39;, &#39;skin-navbar-chat2db&#39;)">Chat2DB</a></li>
+            </ul>
+            <ul id="nav_right" class="navbar-list navbar-right">
+                <li>
+                    <form id="zzk_search" class="navbar-search dropdown" action="https://zzk.cnblogs.com/s" method="get" role="search">
+                        <input name="w" id="zzk_search_input" placeholder="代码改变世界" type="search" tabindex="3" autocomplete="off">
+                        <button id="zzk_search_button" onclick="window.navbarSearchManager.triggerActiveOption()">
+                            <img id="search_icon" class="focus-hidden" src="./MPU6050滤波、姿态融合（一阶互补、卡尔曼） - Andrew_qian - 博客园_files/search.svg" alt="搜索">
+                            <img class="hidden focus-visible" src="./MPU6050滤波、姿态融合（一阶互补、卡尔曼） - Andrew_qian - 博客园_files/enter.svg" alt="搜索">
+                        </button>
+                        <ul id="navbar_search_options" class="dropdown-menu quick-search-menu">
+                            <li tabindex="0" class="active" onclick="zzkSearch(event, document.getElementById(&#39;zzk_search_input&#39;).value)">
+                                <div class="keyword-wrapper">
+                                    <img src="./MPU6050滤波、姿态融合（一阶互补、卡尔曼） - Andrew_qian - 博客园_files/search.svg" alt="搜索">
+                                    <div class="keyword"></div>
+                                </div>
+                                <span class="search-area">所有博客</span>
+                            </li>
+                                    <li tabindex="1" onclick="zzkBlogSearch(event, &#39;qsyll0916&#39;, document.getElementById(&#39;zzk_search_input&#39;).value)">
+                                        <div class="keyword-wrapper">
+                                            <img src="./MPU6050滤波、姿态融合（一阶互补、卡尔曼） - Andrew_qian - 博客园_files/search.svg" alt="搜索">
+                                            <div class="keyword"></div>
+                                        </div>
+                                        <span class="search-area">当前博客</span>
+                                    </li>
+                        </ul>
+                    </form>
+                </li>
+                <li id="navbar_login_status" class="navbar-list">
+                    <a class="navbar-user-info navbar-blog" href="https://i.cnblogs.com/EditPosts.aspx?opt=1" alt="写随笔" title="写随笔" style="display: none;">
+                        <img id="new_post_icon" class="navbar-icon" src="./MPU6050滤波、姿态融合（一阶互补、卡尔曼） - Andrew_qian - 博客园_files/newpost.svg" alt="写随笔">
+                    </a>
+                    <a id="navblog-myblog-icon" class="navbar-user-info navbar-blog" href="https://passport.cnblogs.com/GetBlogApplyStatus.aspx" alt="我的博客" title="我的博客" style="display: none;">
+                        <img id="myblog_icon" class="navbar-icon" src="./MPU6050滤波、姿态融合（一阶互补、卡尔曼） - Andrew_qian - 博客园_files/myblog.svg" alt="我的博客">
+                    </a>
+                    <a class="navbar-user-info navbar-message navbar-icon-wrapper" href="https://msg.cnblogs.com/" alt="短消息" title="短消息" style="display: none;">
+                        <img id="msg_icon" class="navbar-icon" src="./MPU6050滤波、姿态融合（一阶互补、卡尔曼） - Andrew_qian - 博客园_files/message.svg" alt="短消息">
+                        <span id="msg_count" style="display: none"></span>
+                    </a>
+                    <a id="navbar_lite_mode_indicator" data-current-page="blog" style="display: none" href="javascript:void(0)" alt="简洁模式" title="简洁模式启用，您在访问他人博客时会使用简洁款皮肤展示">
+                        <img class="navbar-icon" src="./MPU6050滤波、姿态融合（一阶互补、卡尔曼） - Andrew_qian - 博客园_files/lite-mode-on.svg" alt="简洁模式">
+                    </a>
+                    <div id="user_info" class="navbar-user-info dropdown" style="display: none;">
+                        <a class="dropdown-button" href="https://home.cnblogs.com/">
+                            <img id="user_icon" class="navbar-avatar" src="./MPU6050滤波、姿态融合（一阶互补、卡尔曼） - Andrew_qian - 博客园_files/avatar-default.svg" alt="用户头像">
+                        </a>
+                        <div class="dropdown-menu">
+                            <a id="navblog-myblog-text" href="https://passport.cnblogs.com/GetBlogApplyStatus.aspx">我的博客</a>
+                            <a href="https://home.cnblogs.com/">我的园子</a>
+                            <a href="https://account.cnblogs.com/settings/account">账号设置</a>
+                            <a href="https://vip.cnblogs.com/my">会员中心</a>
+                            <a href="javascript:void(0)" id="navbar_lite_mode_toggle" title="简洁模式会使用简洁款皮肤显示所有博客">
+    简洁模式 <span id="navbar_lite_mode_spinner" class="hide">...</span>
+</a>
+
+                            <a href="javascript:void(0)" onclick="account.logout();">退出登录</a>
+                        </div>
+                    </div>
+                    <a class="navbar-anonymous" href="https://account.cnblogs.com/signup" style="display: inline;">注册</a>
+                    <a class="navbar-anonymous" href="javascript:void(0);" onclick="account.login()" style="display: inline;">登录</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+    
+
+    <!--done-->
+<div id="home">
+<div id="header">
+	<div id="blogTitle">
+        <a id="lnkBlogLogo" href="https://www.cnblogs.com/qsyll0916/"><img id="blogLogo" src="./MPU6050滤波、姿态融合（一阶互补、卡尔曼） - Andrew_qian - 博客园_files/logo.gif" alt="返回主页"></a>		
+		
+<!--done-->
+<h1><a id="Header1_HeaderTitle" class="headermaintitle HeaderMainTitle" href="https://www.cnblogs.com/qsyll0916">Andrew_qian</a>
+</h1>
+<h2>虽千万里，吾往矣。</h2>
+
+
+
+
+		
+	</div><!--end: blogTitle 博客的标题和副标题 -->
+	<div id="navigator">
+		
+<ul id="navList">
+<li><a id="blog_nav_sitehome" class="menu" href="https://www.cnblogs.com/">
+博客园</a>
+</li>
+<li>
+<a id="blog_nav_myhome" class="menu" href="https://www.cnblogs.com/qsyll0916/">
+首页</a>
+</li>
+<li>
+
+<a id="blog_nav_newpost" class="menu" href="https://i.cnblogs.com/EditPosts.aspx?opt=1">
+新随笔</a>
+</li>
+<li>
+<a id="blog_nav_contact" class="menu" href="https://msg.cnblogs.com/send/Andrew_qian">
+联系</a></li>
+<li>
+<a id="blog_nav_rss" class="menu" href="javascript:void(0)" data-rss="https://www.cnblogs.com/qsyll0916/rss/">
+订阅</a>
+<!--<partial name="./Shared/_XmlLink.cshtml" model="Model" /></li>--></li>
+<li>
+<a id="blog_nav_admin" class="menu" href="https://i.cnblogs.com/">
+管理</a>
+</li>
+</ul>
+
+
+		<div class="blogStats">
+			<span id="stats_post_count">随笔 - 152&nbsp; </span>
+<span id="stats_article_count">文章 - 0&nbsp; </span>
+<span id="stats-comment_count">评论 - 62&nbsp; </span>
+<span id="stats-total-view-count">阅读 - 
+<span title="总阅读数: 896277">
+89万</span></span>
+
+		</div><!--end: blogStats -->
+	</div><!--end: navigator 博客导航栏 -->
+</div><!--end: header 头部 -->
+<div id="main">
+	<div id="mainContent">
+	<div class="forFlow">
+		<div id="post_detail">
+    <!--done-->
+    <div id="topics">
+        <div class="post">
+            <h1 class="postTitle">
+                <a id="cb_post_title_url" class="postTitle2 vertical-middle" href="https://www.cnblogs.com/qsyll0916/p/8030379.html" title="发布于 2017-12-12 23:44">
+    <span role="heading" aria-level="2">MPU6050滤波、姿态融合（一阶互补、卡尔曼）</span>
+    
+
+</a>
+
+            </h1>
+            <div class="clear"></div>
+            <div class="postBody">
+                <div id="cnblogs_post_body" class="blogpost-body blogpost-body-html">
+<p>前几天做了6050原始数据的串口输出和上位机波形的查看。这篇博客我们来看一下对原始数据的处理。</p>
+<p>任务：利用STC89C52RC对MPU6050原始数据进行滤波与姿态融合。</p>
+<p><br>首先我摘抄了一段别人在昨晚这个实验的写的最后总结。<br>1.尽量不要用MPU6050内置的LPF滤波。虽然相比于原始加速度计输出，该LPF可以平滑输出，但是在FFT频谱上的表现相当差劲。<br>2.广泛使用的窗口平均滑动滤波无论在FFT还是RMSE表现上都有不错的表现，所以一般基础应用（低速运动或四轴初学者）采用窗口平均滤波是比较明智的选择。<br>3.想要达到更好的滤波效果，FIR或者IIR滤波器是更好的选择。笔者测试2阶30Hz的Butterworth滤波器虽然在平滑性RMSE只比窗口平均滑动差了一点（但是比LPF要好），但是数据实时性性能指标上比前者响应速度提高了近一倍。因此在制作四轴的进阶阶段，可以考虑将窗口平均滑动换成Butterworth滤波器。</p>
+<p>开发日记，不想看的可以跳过，仅仅是为了记录自己的过程。<br>//----------------------------------------------------------------------------------------------------------------------------------------<br>2017.12.5  晚<br>刚刚写完6050的零偏矫正和滑动窗口滤波，就已经超过51单片机内部最大RAM允许范围了。具体表现为：<br>USERS\MPU6050.C(241): error C249: 'DATA': SEGMENT TOO LARGE<br>定义的数据段大于单片机内部RAM,</p>
+<p>查了资料，原来这段程序并没有把stc89c52内部的512字节的RAM全部用完！而是用完了开头的128字节的数据（0X00-0X7F）后面还有128*3的字节量没有被使用。</p>
+<p>另外，当我们程序中总变量的字节数超过128字节时，必须对程序中所有变量进行初始化，否则没有被初始化的变量默认值不在是0，而是不确定的随机数。这时我们必须在keil中设置存储器的存储模式。但是当你的变量总字节在128字节以内的话，并且存储模式为small模式时，没有初始化的变量的默认值才是0.</p>
+<p>1.Small模式<br>所有缺省变量参数均装入内部 128字节 RAM，优点是访问速度快，缺点是空间有限，只适用于小程序。<br>2. Compact 模式<br>所有缺省变量均位于外部RAM区的一页(256Byte)。和small模式中使用pdata定义变量的效果相同。如：uchar pdata a[100]; 该模式下，总变量不得超过256字节。<br>3. Large 模式<br>所有缺省变量可放在多达 64KB 的外部RAM 区，优点是空间大，可存变量多，缺点是速度较慢。在large模式下，和在small模式中使用关键字xdata 定义变量的效果一样。如：char xdata a[100];这样显式的规定了变量的存放区域，以定义为准，不受存储模式的影响。在此模式下编写程序时，定义的变量不要超过单片机规定的内部最大RAM数，因为即使超过了，编译器也不会报错，但是程序运行一定出错。</p>
+<p>注意：  为了程序安全，当程序中定义超过128字节的数据时，最好申明为xdata<br>型，为其在扩展RAM中分配内存。</p>
+<p>2017.12.6  下午<br>一般我们最好配置为small模式，然后必要的情况下，使用xdata对变量进行说明。</p>
+<p>/************<br>注意看编译后的这个，他们的单位时字节B。而1k =  1024B<br>Program Size: data=16.1 xdata=247 code=3424<br>/************</p>
+<p>由于在6050数据处理函数中多次使用静态局部变量，所以加深一下对他的理解。<br>对静态局部变量的说明： <br>(1) 静态局部变量在静态存储区内分配存储单元。在程序整个运行期间都不释放。而自动变量（即动态局部变量）属于动态存储类别，存储在动态存储区空间(而不是静态存储区空间)，函数调用结束后即释放。 <br>(2) 为静态局部变量赋初值是在编译时进行值的，即只赋初值一次，在程序运行时它已有初值。以后每次调用函数时不再重新赋初值而只是保留上次函数调用结束时的值。而为自动变量赋初值，不是在编译时进行的，而是在函数调用时进行，每调用一次函数重新给一次初值，相当于执行一次赋值语句。 <br>(3) 如果在定义局部变量时不赋初值的话，对静态局部变量来说，编译时自动赋初值0(对数值型变量)或空字符(对字符型变量)。而对自动变量来说，如果不赋初值，则它的值是一个不确定的值。这是由于每次函数调用结束后存储单元已释放，下次调用时又重新另分配存储单元，而所分配的单元中的值是不确定的。 <br>(4) 虽然静态局部变量在函数调用结束后仍然存在，但其他函数是不能引用它的，也就是说，在其他函数中它是“不可见”的。</p>
+<p><br>不管怎么修改量程，输出的波形震动范围总是在+-20000波动，但是当我把加速度计的量程设置为+-16G的时候，理论上其LSB应该为2048左右，但是发现输出的波形也是震动范围很大。而且陀螺仪的数据比一开始不处理的时候震动更加明显。</p>
+<p>内存覆盖：<br>以覆盖的（某个函数的局部变量空间在退出该函数是就释放,由别的函数的局部变量覆盖）,可以提高内存利用率。当然静态局部变量除外,其内存使用方式与全局变量相同;</p>
+<p>2017.12.7  晚<br>今天发现我的程序确实存在问题，就是运算时的数据溢出。在进行零偏数据的计算时，需要将200个原始数据相加，但是一开始我的总和定义的还是一个int型的数据，这时200个数据的和可能已经超过了int型数据的取值范围，所以产生了溢出。导致数据的不准确。那么后面计算的数据也是不准确的。所以我晃动传感器曲线都没有什么变化。唉，学单片机都得过数据类型、内存管理这道坎啊。</p>
+<p>2017.12.11  下午<br>如果全是自己开发的话，没有人指导的情况下，每一个小小的进步，都是非常不容易的！！</p>
+<p>2017.12.12  晚<br>目前的问题就是静止状态下陀螺仪输出的数据不为零。还有就是由于单片机运算能力的限制，输出的波形延迟较大。<br>//---------------------------------------------------------------------------------------------------------------<br>经过大概一个星期的尝试，终于用51单片机对6050进行了正确的读取与姿态融合。其实现在想想自己这几天所做的所有事情，并不多。程序前两天就写完了，后面的大部分时间都是在对程序进行调整，对波形进行分析。从刚开始凌乱的波形，到后面使用一阶互补滤波和卡尔曼滤波得出一个姿态角的流畅波形。这中间的苦恼和困难只有自己知道。也行对于一个老手来说，我这几天所做的所有事情，他能在一上午或者几个小时内完成，但是这几天所有的思考与疑惑都对我有很大的帮助。慢慢的养成了分析思考问题的方法。遇到问题不要慌张，一点点的去分析。不要放过任何一个细节。其实我们常说，一个经验丰富的老手能很快的解决一个棘手的问题。他们靠的是什么？所有人都知道是经验。但是经验又是什么？说的通俗一点，经验就是他们所有踩过的坑，进行过的所有思考。<br>想说一个我在做这个实验小小的插曲，有一天的时间，波形出来的都是方波，稍微动一下就满量程，波形很难看。想了很久，检查了不知多少遍代码，逻辑没问题啊，也没有报错，怎么波形就不对呢？突然一瞬间，发现了一点小问题。一个计数变量，定义了一个unsigned char i;来进行零偏数据的计数，每500个数据进行一次平均，刚开始愣是没发现不对。unsigned char 变量的最大计数是256！！！<br>一个计数变量 ，平时根本就不会去注意他的，但是关键时候就是他搅的局。改了这个错误之后，波形看起来好了很多。</p>
+<p>首先在上次博客的基础上，先进行一次滑动平均滤波，滤波窗口大致为6个数据。</p>
+<div class="cnblogs_code"><div class="cnblogs_code_toolbar"><span class="cnblogs_code_copy"><a href="javascript:void(0);" onclick="copyCnblogsCode(this)" title="复制代码"><img src="./MPU6050滤波、姿态融合（一阶互补、卡尔曼） - Andrew_qian - 博客园_files/copycode.gif" alt="复制代码"></a></span></div>
+<pre><span style="color: rgba(0, 128, 0, 1)">/*</span><span style="color: rgba(0, 128, 0, 1)">
+**2017.12.5
+**对6050的原始数据进行处理，滤波，角度转换。
+**滑动平均滤波
+</span><span style="color: rgba(0, 128, 0, 1)">*/</span>
+
+
+<span style="color: rgba(0, 0, 255, 1)">void</span> mpu6050_data_process(<span style="color: rgba(0, 0, 255, 1)">void</span><span style="color: rgba(0, 0, 0, 1)">)
+{
+
+    unsigned </span><span style="color: rgba(0, 0, 255, 1)">char</span> i = <span style="color: rgba(128, 0, 128, 1)">0</span>,  j = <span style="color: rgba(128, 0, 128, 1)">0</span><span style="color: rgba(0, 0, 0, 1)">;
+    </span><span style="color: rgba(0, 0, 255, 1)">static</span> unsigned <span style="color: rgba(0, 0, 255, 1)">char</span> acc_filter_cnt = <span style="color: rgba(128, 0, 128, 1)">0</span>;<span style="color: rgba(0, 128, 0, 1)">//</span><span style="color: rgba(0, 128, 0, 1)">滤波次数计数</span>
+    <span style="color: rgba(0, 0, 255, 1)">static</span> unsigned <span style="color: rgba(0, 0, 255, 1)">char</span> gyro_filter_cnt = <span style="color: rgba(128, 0, 128, 1)">0</span><span style="color: rgba(0, 0, 0, 1)">;
+    </span><span style="color: rgba(0, 0, 255, 1)">long</span> <span style="color: rgba(0, 0, 255, 1)">int</span> xdata acc_temp[<span style="color: rgba(128, 0, 128, 1)">3</span>] = {<span style="color: rgba(128, 0, 128, 1)">0</span>};<span style="color: rgba(0, 128, 0, 1)">//</span><span style="color: rgba(0, 128, 0, 1)">三轴加速度,注意，这个不能定义为静态</span>
+    <span style="color: rgba(0, 0, 255, 1)">long</span> <span style="color: rgba(0, 0, 255, 1)">int</span> xdata gyro_temp[<span style="color: rgba(128, 0, 128, 1)">3</span>] = {<span style="color: rgba(128, 0, 128, 1)">0</span><span style="color: rgba(0, 0, 0, 1)">};
+    </span><span style="color: rgba(0, 0, 255, 1)">static</span> <span style="color: rgba(0, 0, 255, 1)">int</span>  acc_x_buf[ACC_FILTER_NUM] = {<span style="color: rgba(128, 0, 128, 1)">0</span>}, <span style="color: rgba(0, 128, 0, 1)">//</span><span style="color: rgba(0, 128, 0, 1)">滑动窗口缓存，每调用一次，里面数据多一个。</span>
+                acc_y_buf[ACC_FILTER_NUM] = {<span style="color: rgba(128, 0, 128, 1)">0</span><span style="color: rgba(0, 0, 0, 1)">},
+                acc_z_buf[ACC_FILTER_NUM] </span>= {<span style="color: rgba(128, 0, 128, 1)">0</span><span style="color: rgba(0, 0, 0, 1)">};
+
+    </span><span style="color: rgba(0, 0, 255, 1)">static</span> <span style="color: rgba(0, 0, 255, 1)">int</span>  gyro_x_buf[GYRO_FILTER_NUM] = {<span style="color: rgba(128, 0, 128, 1)">0</span>}, <span style="color: rgba(0, 128, 0, 1)">//</span><span style="color: rgba(0, 128, 0, 1)">滑动窗口缓存，每调用一次，里面数据多一个。</span>
+                   gyro_y_buf[GYRO_FILTER_NUM] = {<span style="color: rgba(128, 0, 128, 1)">0</span><span style="color: rgba(0, 0, 0, 1)">},
+                   gyro_z_buf[GYRO_FILTER_NUM] </span>= {<span style="color: rgba(128, 0, 128, 1)">0</span><span style="color: rgba(0, 0, 0, 1)">};
+
+    </span><span style="color: rgba(0, 0, 255, 1)">float</span> xdata init_ax = <span style="color: rgba(128, 0, 128, 1)">0</span>,init_ay = <span style="color: rgba(128, 0, 128, 1)">0</span>,init_az = <span style="color: rgba(128, 0, 128, 1)">0</span><span style="color: rgba(0, 0, 0, 1)">;
+    </span><span style="color: rgba(0, 0, 255, 1)">float</span> xdata acc_angle_x = <span style="color: rgba(128, 0, 128, 1)">0</span>,gyro_angle_x = <span style="color: rgba(128, 0, 128, 1)">0</span>;    <span style="color: rgba(0, 128, 0, 1)">//</span><span style="color: rgba(0, 128, 0, 1)">一阶互补的参数传递</span>
+<span style="color: rgba(0, 0, 0, 1)">
+
+    mpu6050_read_acc();     </span><span style="color: rgba(0, 128, 0, 1)">//</span><span style="color: rgba(0, 128, 0, 1)">获取原始数据</span>
+<span style="color: rgba(0, 0, 0, 1)">    mpu6050_read_gyro();
+
+    init_ax </span>=  (<span style="color: rgba(0, 0, 255, 1)">float</span>)mpu_data.acc_data.x / ACC_G;       <span style="color: rgba(0, 128, 0, 1)">//</span><span style="color: rgba(0, 128, 0, 1)">计算单位为G的各轴重力加速度分量</span>
+    init_ay =  (<span style="color: rgba(0, 0, 255, 1)">float</span>)mpu_data.acc_data.y /<span style="color: rgba(0, 0, 0, 1)"> ACC_G;
+    init_az </span>=  (<span style="color: rgba(0, 0, 255, 1)">float</span>)mpu_data.acc_data.z /<span style="color: rgba(0, 0, 0, 1)"> ACC_G;
+
+    acc_angle_x </span>= atan(init_ax/init_az) * <span style="color: rgba(128, 0, 128, 1)">180</span> / PI ;    <span style="color: rgba(0, 128, 0, 1)">//</span><span style="color: rgba(0, 128, 0, 1)">加速度计x轴角度</span>
+    gyro_angle_x = -(<span style="color: rgba(0, 0, 255, 1)">float</span>)mpu_data.gyro_data.y / <span style="color: rgba(128, 0, 128, 1)">7510.0</span>;     <span style="color: rgba(0, 128, 0, 1)">//</span><span style="color: rgba(0, 128, 0, 1)">陀螺仪计算x轴角度,7150??</span>
+<span style="color: rgba(0, 0, 0, 1)">
+    mpu_data.acc_angle.x </span>= (<span style="color: rgba(0, 0, 255, 1)">int</span>)one_filter(acc_angle_x,gyro_angle_x);         <span style="color: rgba(0, 128, 0, 1)">//</span><span style="color: rgba(0, 128, 0, 1)">一阶互补滤波，获取偏x轴角度</span>
+    mpu_data.acc_angle.y = (<span style="color: rgba(0, 0, 255, 1)">int</span>)kalman_filter(acc_angle_x,gyro_angle_x);     <span style="color: rgba(0, 128, 0, 1)">//</span><span style="color: rgba(0, 128, 0, 1)">获取卡尔曼滤波
+
+
+</span><span style="color: rgba(0, 128, 0, 1)">//</span><span style="color: rgba(0, 128, 0, 1)">加速度计数据处理
+</span><span style="color: rgba(0, 128, 0, 1)">//</span><span style="color: rgba(0, 128, 0, 1)">-----------------------------------------------------</span>
+    acc_x_buf[acc_filter_cnt] = mpu_data.acc_data.x;<span style="color: rgba(0, 128, 0, 1)">//</span><span style="color: rgba(0, 128, 0, 1)">平均滤波 ,更新数据，一开始这里写成了加，数据一直不对</span>
+    acc_y_buf[acc_filter_cnt] =<span style="color: rgba(0, 0, 0, 1)"> mpu_data.acc_data.y;
+    acc_z_buf[acc_filter_cnt] </span>=<span style="color: rgba(0, 0, 0, 1)"> mpu_data.acc_data.z;
+
+    </span><span style="color: rgba(0, 0, 255, 1)">for</span>(i=<span style="color: rgba(128, 0, 128, 1)">0</span>;i&lt;ACC_FILTER_NUM;i++)    <span style="color: rgba(0, 128, 0, 1)">//</span><span style="color: rgba(0, 128, 0, 1)">滑动滤波,取平均值</span>
+<span style="color: rgba(0, 0, 0, 1)">    {
+        acc_temp[</span><span style="color: rgba(128, 0, 128, 1)">0</span>]+=<span style="color: rgba(0, 0, 0, 1)"> acc_x_buf[i];
+        acc_temp[</span><span style="color: rgba(128, 0, 128, 1)">1</span>]+=<span style="color: rgba(0, 0, 0, 1)"> acc_y_buf[i];
+        acc_temp[</span><span style="color: rgba(128, 0, 128, 1)">2</span>]+=<span style="color: rgba(0, 0, 0, 1)"> acc_z_buf[i];
+    }
+
+    </span><span style="color: rgba(0, 128, 0, 1)">//</span><span style="color: rgba(0, 128, 0, 1)">在此进行 六面校准
+    </span><span style="color: rgba(0, 128, 0, 1)">//</span><span style="color: rgba(0, 128, 0, 1)">---------------------------</span>
+    mpu_data.acc_filter.x = (acc_temp[<span style="color: rgba(128, 0, 128, 1)">0</span>] / ACC_FILTER_NUM); <span style="color: rgba(0, 128, 0, 1)">//</span><span style="color: rgba(0, 128, 0, 1)">得出沿x轴方向的重力加速度， 单位G</span>
+    mpu_data.acc_filter.y = (acc_temp[<span style="color: rgba(128, 0, 128, 1)">1</span>] /<span style="color: rgba(0, 0, 0, 1)"> ACC_FILTER_NUM);
+    mpu_data.acc_filter.z </span>= (acc_temp[<span style="color: rgba(128, 0, 128, 1)">2</span>] /<span style="color: rgba(0, 0, 0, 1)"> ACC_FILTER_NUM);
+    </span><span style="color: rgba(0, 128, 0, 1)">//</span><span style="color: rgba(0, 128, 0, 1)">--------------------------          </span>
+<span style="color: rgba(0, 0, 0, 1)">
+    acc_filter_cnt</span>++<span style="color: rgba(0, 0, 0, 1)">;
+    </span><span style="color: rgba(0, 0, 255, 1)">if</span>(acc_filter_cnt ==<span style="color: rgba(0, 0, 0, 1)"> ACC_FILTER_NUM)
+    {
+        acc_filter_cnt </span>= <span style="color: rgba(128, 0, 128, 1)">0</span><span style="color: rgba(0, 0, 0, 1)">;
+    }
+
+</span><span style="color: rgba(0, 128, 0, 1)">//</span><span style="color: rgba(0, 128, 0, 1)">陀螺仪数据处理
+</span><span style="color: rgba(0, 128, 0, 1)">//</span><span style="color: rgba(0, 128, 0, 1)">-----------------------------------------------------------</span>
+    gyro_x_buf[gyro_filter_cnt] =<span style="color: rgba(0, 0, 0, 1)"> mpu_data.gyro_data.x;
+    gyro_y_buf[gyro_filter_cnt] </span>=<span style="color: rgba(0, 0, 0, 1)"> mpu_data.gyro_data.y;
+    gyro_z_buf[gyro_filter_cnt] </span>=<span style="color: rgba(0, 0, 0, 1)"> mpu_data.gyro_data.z;
+
+    </span><span style="color: rgba(0, 0, 255, 1)">for</span>(j=<span style="color: rgba(128, 0, 128, 1)">0</span>;j&lt;GYRO_FILTER_NUM;j++)    <span style="color: rgba(0, 128, 0, 1)">//</span><span style="color: rgba(0, 128, 0, 1)">滑动滤波,取平均值</span>
+<span style="color: rgba(0, 0, 0, 1)">    {
+        gyro_temp[</span><span style="color: rgba(128, 0, 128, 1)">0</span>]+=<span style="color: rgba(0, 0, 0, 1)"> gyro_x_buf[j];
+        gyro_temp[</span><span style="color: rgba(128, 0, 128, 1)">1</span>]+=<span style="color: rgba(0, 0, 0, 1)"> gyro_y_buf[j];
+        gyro_temp[</span><span style="color: rgba(128, 0, 128, 1)">2</span>]+=<span style="color: rgba(0, 0, 0, 1)"> gyro_z_buf[j];
+    }
+
+    </span><span style="color: rgba(0, 128, 0, 1)">//</span><span style="color: rgba(0, 128, 0, 1)">在此进行 六面校准
+    </span><span style="color: rgba(0, 128, 0, 1)">//</span><span style="color: rgba(0, 128, 0, 1)">-----------------------------</span>
+    mpu_data.gyro_filter.x = gyro_temp[<span style="color: rgba(128, 0, 128, 1)">0</span>]/<span style="color: rgba(0, 0, 0, 1)">GYRO_FILTER_NUM;
+    mpu_data.gyro_filter.y </span>= gyro_temp[<span style="color: rgba(128, 0, 128, 1)">1</span>]/<span style="color: rgba(0, 0, 0, 1)">GYRO_FILTER_NUM;
+    mpu_data.gyro_filter.z </span>= gyro_temp[<span style="color: rgba(128, 0, 128, 1)">2</span>]/<span style="color: rgba(0, 0, 0, 1)">GYRO_FILTER_NUM;
+    </span><span style="color: rgba(0, 128, 0, 1)">//</span><span style="color: rgba(0, 128, 0, 1)">--------------------------</span>
+<span style="color: rgba(0, 0, 0, 1)">
+    gyro_filter_cnt</span>++<span style="color: rgba(0, 0, 0, 1)">;
+    </span><span style="color: rgba(0, 0, 255, 1)">if</span>(gyro_filter_cnt ==<span style="color: rgba(0, 0, 0, 1)"> GYRO_FILTER_NUM)
+    {
+        gyro_filter_cnt </span>= <span style="color: rgba(128, 0, 128, 1)">0</span><span style="color: rgba(0, 0, 0, 1)">;
+    }
+
+    </span><span style="color: rgba(0, 128, 0, 1)">//</span><span style="color: rgba(0, 128, 0, 1)">化为度制
+</span><span style="color: rgba(0, 128, 0, 1)">//</span><span style="color: rgba(0, 128, 0, 1)">    mpu_data.gyro_dps.x = (float)mpu_data.gyro_filter.x * GYRO_A;
+</span><span style="color: rgba(0, 128, 0, 1)">//</span><span style="color: rgba(0, 128, 0, 1)">    mpu_data.gyro_dps.y = (float)mpu_data.gyro_filter.y * GYRO_A;
+</span><span style="color: rgba(0, 128, 0, 1)">//</span><span style="color: rgba(0, 128, 0, 1)">    mpu_data.gyro_dps.z = (float)mpu_data.gyro_filter.z * GYRO_A;
+</span><span style="color: rgba(0, 128, 0, 1)">//</span>
+<span style="color: rgba(0, 128, 0, 1)">//</span>    <span style="color: rgba(0, 128, 0, 1)">//</span><span style="color: rgba(0, 128, 0, 1)">化为弧度制
+</span><span style="color: rgba(0, 128, 0, 1)">//</span><span style="color: rgba(0, 128, 0, 1)">    mpu_data.gyro_rad.x = (float)mpu_data.gyro_filter.x * GYRO_R;
+</span><span style="color: rgba(0, 128, 0, 1)">//</span><span style="color: rgba(0, 128, 0, 1)">    mpu_data.gyro_rad.y = (float)mpu_data.gyro_filter.y * GYRO_R;
+</span><span style="color: rgba(0, 128, 0, 1)">//</span><span style="color: rgba(0, 128, 0, 1)">    mpu_data.gyro_rad.z = (float)mpu_data.gyro_filter.z * GYRO_R;</span>
+<span style="color: rgba(0, 0, 0, 1)">
+
+}</span></pre>
+<div class="cnblogs_code_toolbar"><span class="cnblogs_code_copy"><a href="javascript:void(0);" onclick="copyCnblogsCode(this)" title="复制代码"><img src="./MPU6050滤波、姿态融合（一阶互补、卡尔曼） - Andrew_qian - 博客园_files/copycode.gif" alt="复制代码"></a></span></div></div>
+<p>数据波形为：</p>
+<p><img src="./MPU6050滤波、姿态融合（一阶互补、卡尔曼） - Andrew_qian - 博客园_files/1083998-20171212233009035-1974215313.png" alt="" class="medium-zoom-image"></p>
+<p>这些仅仅是对原始数据的滤波处理，因为加速度计包含了太多的噪声。陀螺仪一般不需要滤波，原始值就很稳定，就是陀螺仪刚开始可能会有零偏，需要我们手动减去这个值。MPU6050 可以输出三轴的加速度和角速度。通过加速度和角速度都可以得到 P<span style="font-family: &quot;Microsoft YaHei&quot;">itch 和 Roll 角（加速度不能得到 Yaw 角），就是说有两组 Pitch、Roll 角，到底应该选哪组呢？别急，先分析一下。MPU6050 的加速度计和陀螺仪各有优缺点，三轴的加速度值没有累积误差，且通过算 tan() 可以得到倾角，但是它包含的噪声太多（因为待测物运动时会产生加速度，电机运行时振动会产生加速度等），不能直接使用；陀螺仪对外界振动影响小，精度高，通过对角速度积分可以得到倾角，但是会产生累积误差。所以，不能单独使用 MPU6050 的加速度计或陀螺仪来得到倾角，需要互补。一阶互补算法的思想就是给加速度和陀螺仪不同的权值，把它们结合到一起，进行修正。</span></p>
+<p>然后就可以利用这个加速度计和陀螺仪的数据进行姿态融合。姿态融合一方面对数据进行了滤波，一方面计算出了角度值。所以也可以利用原始数据进行姿态融合。因为我使用的是51系列的单片机，运算速率很慢，在此我直接用原始数据除精度后进行一阶互补滤波，得出了x轴的偏移角度。然后再用卡尔曼滤波对姿态进行融合，对比两种融合方式的波形。</p>
+<div class="cnblogs_code"><div class="cnblogs_code_toolbar"><span class="cnblogs_code_copy"><a href="javascript:void(0);" onclick="copyCnblogsCode(this)" title="复制代码"><img src="./MPU6050滤波、姿态融合（一阶互补、卡尔曼） - Andrew_qian - 博客园_files/copycode.gif" alt="复制代码"></a></span></div>
+<pre>loat xdata one_filter_angle = <span style="color: rgba(128, 0, 128, 1)">0</span><span style="color: rgba(0, 0, 0, 1)">;
+</span><span style="color: rgba(0, 0, 255, 1)">float</span> xdata kalman_filter_angle = <span style="color: rgba(128, 0, 128, 1)">0</span>, kalman_filter_angle_dot = <span style="color: rgba(128, 0, 128, 1)">0</span><span style="color: rgba(0, 0, 0, 1)">;
+
+</span><span style="color: rgba(0, 128, 0, 1)">//</span><span style="color: rgba(0, 128, 0, 1)">----------------
+</span><span style="color: rgba(0, 128, 0, 1)">//</span><span style="color: rgba(0, 128, 0, 1)">在进行滤波之前，需要获取原始数据 </span>
+<span style="color: rgba(0, 0, 255, 1)">float</span> one_filter(<span style="color: rgba(0, 0, 255, 1)">float</span> angle_m,<span style="color: rgba(0, 0, 255, 1)">float</span><span style="color: rgba(0, 0, 0, 1)"> gyro_m)
+{
+
+    </span><span style="color: rgba(0, 0, 255, 1)">float</span> xdata K1 =<span style="color: rgba(128, 0, 128, 1)">0.1</span>; <span style="color: rgba(0, 128, 0, 1)">//</span><span style="color: rgba(0, 128, 0, 1)"> 对加速度计取值的权重</span>
+    <span style="color: rgba(0, 0, 255, 1)">float</span> xdata dt=<span style="color: rgba(128, 0, 128, 1)">0.005</span>;<span style="color: rgba(0, 128, 0, 1)">//</span><span style="color: rgba(0, 128, 0, 1)">注意：dt的取值为滤波器采样时间</span>
+<span style="color: rgba(0, 0, 0, 1)">
+    one_filter_angle </span>= K1 * angle_m+ (<span style="color: rgba(128, 0, 128, 1)">1</span>-K1) * (one_filter_angle + gyro_m *<span style="color: rgba(0, 0, 0, 1)"> dt);
+    </span><span style="color: rgba(0, 0, 255, 1)">return</span><span style="color: rgba(0, 0, 0, 1)"> one_filter_angle;
+}
+
+
+</span><span style="color: rgba(0, 128, 0, 1)">//</span><span style="color: rgba(0, 128, 0, 1)">------------------</span>
+<span style="color: rgba(0, 0, 255, 1)">float</span> kalman_filter(<span style="color: rgba(0, 0, 255, 1)">float</span> angle_m,<span style="color: rgba(0, 0, 255, 1)">float</span><span style="color: rgba(0, 0, 0, 1)"> gyro_m)
+{
+
+    </span><span style="color: rgba(0, 128, 0, 1)">//</span><span style="color: rgba(0, 128, 0, 1)">滤波参数</span>
+    <span style="color: rgba(0, 0, 255, 1)">float</span> xdata dt = <span style="color: rgba(128, 0, 128, 1)">0.005</span>;   <span style="color: rgba(0, 128, 0, 1)">//</span><span style="color: rgba(0, 128, 0, 1)">卡尔曼采样时间</span>
+    <span style="color: rgba(0, 0, 255, 1)">float</span> xdata P[<span style="color: rgba(128, 0, 128, 1)">2</span>][<span style="color: rgba(128, 0, 128, 1)">2</span>]    = {{<span style="color: rgba(128, 0, 128, 1)">1</span>,<span style="color: rgba(128, 0, 128, 1)">0</span>},{<span style="color: rgba(128, 0, 128, 1)">0</span>,<span style="color: rgba(128, 0, 128, 1)">1</span><span style="color: rgba(0, 0, 0, 1)">}};
+    </span><span style="color: rgba(0, 0, 255, 1)">float</span> xdata Pdot[<span style="color: rgba(128, 0, 128, 1)">4</span>]    = {<span style="color: rgba(128, 0, 128, 1)">0</span>,<span style="color: rgba(128, 0, 128, 1)">0</span>,<span style="color: rgba(128, 0, 128, 1)">0</span>,<span style="color: rgba(128, 0, 128, 1)">0</span><span style="color: rgba(0, 0, 0, 1)">};
+    </span><span style="color: rgba(0, 0, 255, 1)">float</span> xdata Q_angle = <span style="color: rgba(128, 0, 128, 1)">0.001</span>;<span style="color: rgba(0, 128, 0, 1)">//</span><span style="color: rgba(0, 128, 0, 1)">角度数据置信度,陀螺仪协方差</span>
+    <span style="color: rgba(0, 0, 255, 1)">float</span> xdata Q_gyro = <span style="color: rgba(128, 0, 128, 1)">0.005</span>;     <span style="color: rgba(0, 128, 0, 1)">//</span><span style="color: rgba(0, 128, 0, 1)">角速度数据置信度，陀螺仪飘移噪声协方差</span>
+    <span style="color: rgba(0, 0, 255, 1)">float</span> xdata R_angle = <span style="color: rgba(128, 0, 128, 1)">0.5</span>;    <span style="color: rgba(0, 128, 0, 1)">//</span><span style="color: rgba(0, 128, 0, 1)">加速度计协方差</span>
+    <span style="color: rgba(0, 0, 255, 1)">char</span> xdata    C_0 = <span style="color: rgba(128, 0, 128, 1)">1</span><span style="color: rgba(0, 0, 0, 1)">;
+    </span><span style="color: rgba(0, 0, 255, 1)">float</span> xdata q_bias = <span style="color: rgba(128, 0, 128, 1)">0</span>,angle_err = <span style="color: rgba(128, 0, 128, 1)">0</span>; <span style="color: rgba(0, 128, 0, 1)">//</span><span style="color: rgba(0, 128, 0, 1)">q_bias为陀螺仪飘移</span>
+    <span style="color: rgba(0, 0, 255, 1)">float</span> xdata PCt_0 = <span style="color: rgba(128, 0, 128, 1)">0</span>,PCt_1 = <span style="color: rgba(128, 0, 128, 1)">0</span>,E = <span style="color: rgba(128, 0, 128, 1)">0</span><span style="color: rgba(0, 0, 0, 1)">;
+    </span><span style="color: rgba(0, 0, 255, 1)">float</span> xdata K_0 = <span style="color: rgba(128, 0, 128, 1)">0</span>,  K_1 = <span style="color: rgba(128, 0, 128, 1)">0</span>,  t_0 = <span style="color: rgba(128, 0, 128, 1)">0</span>,  t_1 = <span style="color: rgba(128, 0, 128, 1)">0</span><span style="color: rgba(0, 0, 0, 1)">;
+
+
+     kalman_filter_angle</span>+= (gyro_m - q_bias) * dt;    <span style="color: rgba(0, 128, 0, 1)">//</span><span style="color: rgba(0, 128, 0, 1)">卡尔曼预测方程，认为每次飘移相同，</span>
+<span style="color: rgba(0, 0, 0, 1)">
+
+    Pdot[</span><span style="color: rgba(128, 0, 128, 1)">0</span>]=Q_angle - P[<span style="color: rgba(128, 0, 128, 1)">0</span>][<span style="color: rgba(128, 0, 128, 1)">1</span>] - P[<span style="color: rgba(128, 0, 128, 1)">1</span>][<span style="color: rgba(128, 0, 128, 1)">0</span><span style="color: rgba(0, 0, 0, 1)">];
+    Pdot[</span><span style="color: rgba(128, 0, 128, 1)">1</span>]=- P[<span style="color: rgba(128, 0, 128, 1)">1</span>][<span style="color: rgba(128, 0, 128, 1)">1</span><span style="color: rgba(0, 0, 0, 1)">];
+    Pdot[</span><span style="color: rgba(128, 0, 128, 1)">2</span>]=- P[<span style="color: rgba(128, 0, 128, 1)">1</span>][<span style="color: rgba(128, 0, 128, 1)">1</span><span style="color: rgba(0, 0, 0, 1)">];
+    Pdot[</span><span style="color: rgba(128, 0, 128, 1)">3</span>]=<span style="color: rgba(0, 0, 0, 1)">Q_gyro;
+
+    P[</span><span style="color: rgba(128, 0, 128, 1)">0</span>][<span style="color: rgba(128, 0, 128, 1)">0</span>] += Pdot[<span style="color: rgba(128, 0, 128, 1)">0</span>] *<span style="color: rgba(0, 0, 0, 1)"> dt;
+    P[</span><span style="color: rgba(128, 0, 128, 1)">0</span>][<span style="color: rgba(128, 0, 128, 1)">1</span>] += Pdot[<span style="color: rgba(128, 0, 128, 1)">1</span>] *<span style="color: rgba(0, 0, 0, 1)"> dt;
+    P[</span><span style="color: rgba(128, 0, 128, 1)">1</span>][<span style="color: rgba(128, 0, 128, 1)">0</span>] += Pdot[<span style="color: rgba(128, 0, 128, 1)">2</span>] *<span style="color: rgba(0, 0, 0, 1)"> dt;
+    P[</span><span style="color: rgba(128, 0, 128, 1)">1</span>][<span style="color: rgba(128, 0, 128, 1)">1</span>] += Pdot[<span style="color: rgba(128, 0, 128, 1)">3</span>] *<span style="color: rgba(0, 0, 0, 1)"> dt;
+
+    PCt_0 </span>= C_0 * P[<span style="color: rgba(128, 0, 128, 1)">0</span>][<span style="color: rgba(128, 0, 128, 1)">0</span>];     <span style="color: rgba(0, 128, 0, 1)">//</span><span style="color: rgba(0, 128, 0, 1)">矩阵乘法中间变量</span>
+    PCt_1 = C_0 * P[<span style="color: rgba(128, 0, 128, 1)">1</span>][<span style="color: rgba(128, 0, 128, 1)">0</span><span style="color: rgba(0, 0, 0, 1)">];
+
+    E </span>= R_angle + C_0 * PCt_0;     <span style="color: rgba(0, 128, 0, 1)">//</span><span style="color: rgba(0, 128, 0, 1)">分母</span>
+<span style="color: rgba(0, 0, 0, 1)">
+    K_0 </span>= PCt_0 / E;   <span style="color: rgba(0, 128, 0, 1)">//</span><span style="color: rgba(0, 128, 0, 1)">增益值</span>
+    K_1 = PCt_1 /<span style="color: rgba(0, 0, 0, 1)"> E;
+
+    angle_err </span>= angle_m -<span style="color: rgba(0, 0, 0, 1)"> kalman_filter_angle;    
+    kalman_filter_angle </span>+= K_0 * angle_err; <span style="color: rgba(0, 128, 0, 1)">//</span><span style="color: rgba(0, 128, 0, 1)">对状态的卡尔曼估计，最优角度</span>
+    q_bias += K_1 *<span style="color: rgba(0, 0, 0, 1)"> angle_err;
+    kalman_filter_angle_dot </span>= gyro_m-q_bias;<span style="color: rgba(0, 128, 0, 1)">//</span><span style="color: rgba(0, 128, 0, 1)">最优角速度</span>
+<span style="color: rgba(0, 0, 0, 1)">
+    t_0 </span>= PCt_0;     <span style="color: rgba(0, 128, 0, 1)">//</span><span style="color: rgba(0, 128, 0, 1)">矩阵计算中间变量</span>
+    t_1 = C_0 * P[<span style="color: rgba(128, 0, 128, 1)">0</span>][<span style="color: rgba(128, 0, 128, 1)">1</span><span style="color: rgba(0, 0, 0, 1)">];
+
+    P[</span><span style="color: rgba(128, 0, 128, 1)">0</span>][<span style="color: rgba(128, 0, 128, 1)">0</span>] -= K_0 *<span style="color: rgba(0, 0, 0, 1)"> t_0;
+    P[</span><span style="color: rgba(128, 0, 128, 1)">0</span>][<span style="color: rgba(128, 0, 128, 1)">1</span>] -= K_0 *<span style="color: rgba(0, 0, 0, 1)"> t_1;
+    P[</span><span style="color: rgba(128, 0, 128, 1)">1</span>][<span style="color: rgba(128, 0, 128, 1)">0</span>] -= K_1 *<span style="color: rgba(0, 0, 0, 1)"> t_0;
+    P[</span><span style="color: rgba(128, 0, 128, 1)">1</span>][<span style="color: rgba(128, 0, 128, 1)">1</span>] -= K_1 *<span style="color: rgba(0, 0, 0, 1)"> t_1;
+
+    </span><span style="color: rgba(0, 0, 255, 1)">return</span><span style="color: rgba(0, 0, 0, 1)"> kalman_filter_angle;
+}</span></pre>
+<div class="cnblogs_code_toolbar"><span class="cnblogs_code_copy"><a href="javascript:void(0);" onclick="copyCnblogsCode(this)" title="复制代码"><img src="./MPU6050滤波、姿态融合（一阶互补、卡尔曼） - Andrew_qian - 博客园_files/copycode.gif" alt="复制代码"></a></span></div></div>
+<p>融合之后的波形：</p>
+<p><img src="./MPU6050滤波、姿态融合（一阶互补、卡尔曼） - Andrew_qian - 博客园_files/1083998-20171212234058488-1142295587.png" alt="" class="medium-zoom-image"></p>
+</div>
+<div id="MySignature" role="contentinfo">
+    虽千万里，吾往矣。
+</div>
+<div class="clear"></div>
+<div id="blog_post_info_block" role="contentinfo">
+
+
+<div id="BlogPostCategory">
+    分类: 
+            <a href="https://www.cnblogs.com/qsyll0916/category/1101115.html" target="_blank">基础还是51</a>
+</div>
+
+    <div id="blog_post_info">
+<div id="green_channel">
+        <a href="javascript:void(0);" id="green_channel_digg" onclick="DiggIt(8030379,cb_blogId,1);green_channel_success(this,&#39;谢谢推荐！&#39;);">好文要顶</a>
+        <a id="green_channel_follow" onclick="follow(&#39;86839025-17c7-e611-845c-ac853d9f53ac&#39;);" href="javascript:void(0);">关注我</a>
+    <a id="green_channel_favorite" onclick="AddToWz(cb_entryId);return false;" href="javascript:void(0);">收藏该文</a>
+    <a id="green_channel_wechat" href="javascript:void(0);" onclick="shareManager.wechatShare()">微信分享</a>
+</div>
+<div id="author_profile">
+    <div id="author_profile_info" class="author_profile_info">
+            <a href="https://home.cnblogs.com/u/qsyll0916/" target="_blank"><img src="./MPU6050滤波、姿态融合（一阶互补、卡尔曼） - Andrew_qian - 博客园_files/20161221105339.png" class="author_avatar" alt=""></a>
+        <div id="author_profile_detail" class="author_profile_info">
+            <a href="https://home.cnblogs.com/u/qsyll0916/">Andrew_qian</a>
+            <br>
+            <a href="https://home.cnblogs.com/u/qsyll0916/followers/">粉丝 - <span class="follower-count">211</span></a>
+            <a href="https://home.cnblogs.com/u/qsyll0916/followees/">关注 - <span class="following-count">4</span></a><br>
+        </div>
+    </div>
+    <div class="clear"></div>
+    <div id="author_profile_honor"></div>
+    <div id="author_profile_follow" class="follow-tip">
+                <a href="javascript:void(0);" onclick="follow(&#39;86839025-17c7-e611-845c-ac853d9f53ac&#39;);return false;">+加关注</a>
+    </div>
+</div>
+<div id="div_digg">
+    <div class="diggit" onclick="votePost(8030379,&#39;Digg&#39;)">
+        <span class="diggnum" id="digg_count">6</span>
+    </div>
+    <div class="buryit" onclick="votePost(8030379,&#39;Bury&#39;)">
+        <span class="burynum" id="bury_count">0</span>
+    </div>
+    <div class="clear"></div>
+    <div class="diggword" id="digg_tips">
+    </div>
+        <div id="vip_tip"><a class="tip" href="https://cnblogs.vip/" target="_blank">升级成为会员</a></div>
+</div>
+
+<script type="text/javascript">
+    currentDiggType = 0;
+</script>
+</div>
+    <div class="clear"></div>
+    <div id="post_next_prev">
+
+    <a href="https://www.cnblogs.com/qsyll0916/p/8000798.html" class="p_n_p_prefix">« </a> 上一篇：    <a href="https://www.cnblogs.com/qsyll0916/p/8000798.html" data-featured-image="" title="发布于 2017-12-07 19:52">【转载】51单片机data，bdata，idata，xdata使用注意事项</a>
+    <br>
+    <a href="https://www.cnblogs.com/qsyll0916/p/8052598.html" class="p_n_p_prefix">» </a> 下一篇：    <a href="https://www.cnblogs.com/qsyll0916/p/8052598.html" data-featured-image="" title="发布于 2017-12-17 17:05">关于keil5使用注意事项（预定义、路径包含）</a>
+
+</div>
+</div>
+            </div>
+            <div class="postDesc">posted @ 
+<span id="post-date" data-last-update-days="2643.720125383632" data-date-created="BlogServer.Application.Dto.BlogPost.BlogPostDto" data-date-updated="2017-12-12 23:44" aria-expanded="false">2017-12-12 23:44</span>&nbsp;
+<a href="https://www.cnblogs.com/qsyll0916">Andrew_qian</a>&nbsp;
+阅读(<span id="post_view_count">25508</span>)&nbsp;
+评论(<span id="post_comment_count">2</span>)&nbsp;
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=8030379" rel="nofollow">编辑</a>&nbsp;
+<a href="javascript:void(0)" onclick="AddToWz(8030379);return false;">收藏</a>&nbsp;
+<a href="javascript:void(0)" onclick="reportManager.report({ currentUserId: &#39;&#39;, targetType: &#39;blogPost&#39;, targetId: &#39;8030379&#39;, targetLink: &#39;https://www.cnblogs.com/qsyll0916/p/8030379.html&#39;, title: &#39;MPU6050滤波、姿态融合（一阶互补、卡尔曼）&#39; })">举报</a>
+</div>
+        </div>
+	    
+	    
+    </div><!--end: topics 文章、评论容器-->
+</div>
+<script>
+    var cb_entryId = 8030379, cb_entryCreatedDate = '2017-12-12 23:44', cb_postType = 1, cb_postTitle = 'MPU6050滤波、姿态融合（一阶互补、卡尔曼）';
+    var allowComments = true, cb_blogId = 324032, cb_blogApp = 'qsyll0916', cb_blogUserGuid = '86839025-17c7-e611-845c-ac853d9f53ac';
+    mermaidRender.render()
+    markdown_highlight()
+    zoomManager.apply("#cnblogs_post_body img:not(.code_img_closed):not(.code_img_opened)");    
+</script>
+<a id="!comments"></a>
+<div id="blog-comments-placeholder"></div>
+<div id="comment_form" class="commentform">
+    <a name="commentform"></a>
+    <div id="divCommentShow"></div>
+    <div id="comment_nav"> 
+        <div class="comment-nav-right">
+            <span id="span_refresh_tips"></span><a href="https://www.cnblogs.com/qsyll0916/p/8030379.html#" onclick="return RefreshPage();">刷新页面</a><a href="https://www.cnblogs.com/qsyll0916/p/8030379.html#top">返回顶部</a>
+        </div>
+    </div>
+    <div id="comment_form_container"><div class="login_tips">
+    登录后才能查看或发表评论，立即 <a rel="nofollow" href="javascript:void(0);" class="underline" onclick="return account.login(&#39;!comments&#39;);">登录</a> 或者
+    <a href="https://www.cnblogs.com/">逛逛</a> 博客园首页
+</div>
+</div>
+    <div class="ad_text_commentbox" id="ad_text_under_commentbox"></div>
+        <div id="cnblogs_ch"><a href="https://dataease.cn/?utm_source=cnblogs" target="_blank" onclick="gtag(&#39;event&#39;, &#39;click&#39;, {&#39;event_category&#39;: &#39;ad&#39;, &#39;event_label&#39;: &#39;T2-飞致云-DataEase&#39;})">【推荐】还在用 ECharts 开发大屏？试试这款永久免费的开源 BI 工具！</a><br><a href="https://www.trae.com.cn/?utm_source=juejin&amp;utm_medium=juejin_trae&amp;utm_campaign=bokeyuan" target="_blank" onclick="gtag(&#39;event&#39;, &#39;click&#39;, {&#39;event_category&#39;: &#39;ad&#39;, &#39;event_label&#39;: &#39;T2-Trae&#39;})">【推荐】国内首个AI IDE，深度理解中文开发场景，立即下载体验Trae</a><br><a href="https://www.marscode.cn/?utm_source=advertising&amp;utm_medium=cnblogs.com_ug_cpa&amp;utm_term=hw_marscode_cnblogs&amp;utm_content=home" target="_blank" onclick="gtag(&#39;event&#39;, &#39;click&#39;, {&#39;event_category&#39;: &#39;ad&#39;, &#39;event_label&#39;: &#39;T2-字节-MarsCode&#39;})">【推荐】编程新体验，更懂你的AI，立即体验豆包MarsCode编程助手</a><br><a href="https://www.doubao.com/?channel=cnblogs&amp;source=hw_db_cnblogs" target="_blank" onclick="gtag(&#39;event&#39;, &#39;click&#39;, {&#39;event_category&#39;: &#39;ad&#39;, &#39;event_label&#39;: &#39;T2-抖音-豆包&#39;})">【推荐】抖音旗下AI助手豆包，你的智能百科全书，全免费不限次数</a><br><a href="http://ishell.cc/" target="_blank" onclick="gtag(&#39;event&#39;, &#39;click&#39;, {&#39;event_category&#39;: &#39;ad&#39;, &#39;event_label&#39;: &#39;T2-IShell&#39;})">【推荐】轻量又高性能的 SSH 工具 IShell：AI 加持，快人一步</a><br></div>
+    <div id="opt_under_post"></div>
+        <div id="blog_c1" class="under-post-card">
+            <a href="https://juejin.cn/coding-contest?utm_source=juejin&amp;utm_medium=juejin_trae&amp;utm_campaign=bokeyuan" rel="nofollow" target="_blank" onclick="countCreativeClicks(&#39;C1-juejin&#39;)">
+                <img src="./MPU6050滤波、姿态融合（一阶互补、卡尔曼） - Andrew_qian - 博客园_files/35695-20250303221234470-1278783675.jpg" onload="countCreativeImpressions(&#39;C1-juejin&#39;)" alt="">
+                <span id="c1_impression" style="display:none"></span>
+            </a>
+        </div>
+    <div id="under_post_card1"><div class="under-post-card">
+<b>编辑推荐：</b>
+<br>
+
+· <a href="https://www.cnblogs.com/huangxincheng/p/18757287" target="_blank">Linux系列：如何用heaptrack跟踪.NET程序的非托管内存泄露</a>
+    <br>
+· <a href="https://www.cnblogs.com/CareySon/p/18757020/Logging_best_practice_for_developer" target="_blank">开发者必知的日志记录最佳实践</a>
+    <br>
+· <a href="https://www.cnblogs.com/CareySon/p/18753299/SQL_SERVER_2015_AI_New_Feature" target="_blank">SQL Server 2025 AI相关能力初探</a>
+    <br>
+· <a href="https://www.cnblogs.com/huangxincheng/p/18748086" target="_blank">Linux系列：如何用 C#调用 C方法造成内存泄露</a>
+    <br>
+· <a href="https://www.cnblogs.com/code-daily/p/18749505" target="_blank">AI与.NET技术实操系列（二）：开始使用ML.NET</a>
+    <br>
+</div></div>
+    <div id="under_post_card2"><div class="itnews under-post-card">
+    <b>阅读排行：</b>
+    <br>
+ ·          <a href="https://www.cnblogs.com/meet/p/18758914" target="_blank">无需6万激活码！GitHub神秘组织3小时极速复刻Manus，手把手教你使用OpenManus搭建本</a>
+        <br>
+ ·          <a href="https://www.cnblogs.com/Can-daydayup/p/18758846" target="_blank">C#/.NET/.NET Core优秀项目和框架2025年2月简报</a>
+        <br>
+ ·          <a href="https://www.cnblogs.com/fanzhidongyzby/p/18759166/manus" target="_blank">Manus爆火，是硬核还是营销？</a>
+        <br>
+ ·          <a href="https://www.cnblogs.com/tiome/p/18753498" target="_blank">一文读懂知识蒸馏</a>
+        <br>
+ ·          <a href="https://www.cnblogs.com/fs7744/p/18759510" target="_blank">终于写完轮子一部分：tcp代理 了，记录一下</a>
+        <br>
+</div></div>
+    <div id="HistoryToday" class="under-post-card" style="display: none;"></div>
+    <script type="text/javascript">
+        var commentManager = new blogCommentManager();
+        commentManager.renderComments(0);
+        fixPostBody();
+        window.footnoteTipManager.generateFootnoteTips();
+
+            window.tocManager.displayDisableTocTips = false;
+            window.tocManager.generateToc();
+            
+                setTimeout(function() { countViews(cb_blogId, cb_entryId); }, 50);
+            
+            deliverT2();
+            deliverC1C2();
+            loadNewsAndKb();
+            
+                LoadPostCategoriesTags(cb_blogId, cb_entryId);
+            
+            LoadPostInfoBlock(cb_blogId, cb_entryId, cb_blogApp, cb_blogUserGuid);
+            GetPrevNextPost(cb_entryId, cb_blogId, cb_entryCreatedDate, cb_postType);
+            loadOptUnderPost();
+            GetHistoryToday(cb_blogId, cb_blogApp, cb_entryCreatedDate);
+                </script>
+</div>
+
+	</div><!--end: forFlow -->
+	</div><!--end: mainContent 主体内容容器-->
+	<div id="sideBar">
+		<div id="sideBarMain">
+			<div id="sidebar_news" class="newsItem">
+    <h3 class="catListTitle">公告</h3>
+<div id="blog-news">    
+    <div id="sidebar_news_content">
+<div id="profile_block">
+    昵称：
+    <a href="https://home.cnblogs.com/u/qsyll0916/">
+        Andrew_qian
+    </a>
+    <br>
+    园龄：
+    <a href="https://home.cnblogs.com/u/qsyll0916/" title="入园时间：2016-12-21">
+        8年2个月
+    </a>
+    <br>
+    粉丝：
+    <a class="follower-count" href="https://home.cnblogs.com/u/qsyll0916/followers/">
+        211
+    </a>
+    <br>
+    关注：
+    <a class="folowing-count" href="https://home.cnblogs.com/u/qsyll0916/followees/">
+        4
+    </a>
+    <div id="p_b_follow" class="follow-tip">
+<a href="javascript:void(0)" onclick="follow(&#39;86839025-17c7-e611-845c-ac853d9f53ac&#39;)">+加关注</a></div>
+    <script>getFollowStatus('86839025-17c7-e611-845c-ac853d9f53ac');</script>
+</div>
+</div>
+</div>
+<script>loadBlogNews();</script>
+
+ 
+</div>
+<div id="sidebar_c3"></div>
+			<div id="blog-calendar" style="">
+
+<table id="blogCalendar" class="Cal" cellspacing="0" cellpadding="0" title="Calendar" border="0">
+    <tbody>
+        <tr>
+            <td colspan="7">
+                <table class="CalTitle" cellspacing="0" border="0">
+                    <tbody>
+                        <tr>
+                            <td class="CalNextPrev">
+                                <a href="javascript:void(0);" onclick="loadBlogCalendar(&#39;2025/02/09&#39;); return false;">&lt;</a>
+                            </td>
+                            <td align="center">2025年3月</td>
+                            <td align="right" class="CalNextPrev">
+                                <a href="javascript:void(0);" onclick="loadBlogCalendar(&#39;2025/04/09&#39;); return false;">&gt;</a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+    <tr>
+        <th class="CalDayHeader" align="center" abbr="日" scope="col">日</th>
+        <th class="CalDayHeader" align="center" abbr="一" scope="col">一</th>
+        <th class="CalDayHeader" align="center" abbr="二" scope="col">二</th>
+        <th class="CalDayHeader" align="center" abbr="三" scope="col">三</th>
+        <th class="CalDayHeader" align="center" abbr="四" scope="col">四</th>
+        <th class="CalDayHeader" align="center" abbr="五" scope="col">五</th>
+        <th class="CalDayHeader" align="center" abbr="六" scope="col">六</th>
+    </tr>
+            <tr>
+                            <td class="CalOtherMonthDay" align="center">23</td>
+                            <td class="CalOtherMonthDay" align="center">24</td>
+                            <td class="CalOtherMonthDay" align="center">25</td>
+                            <td class="CalOtherMonthDay" align="center">26</td>
+                            <td class="CalOtherMonthDay" align="center">27</td>
+                            <td class="CalOtherMonthDay" align="center">28</td>
+                    <td class="CalWeekendDay" align="center">
+                        1
+                    </td>
+            </tr>
+                <tr>
+                        <td class="CalWeekendDay" align="center">
+                            2
+                        </td>
+                            <td class="" align="center">
+                                3
+                            </td>
+                            <td class="" align="center">
+                                4
+                            </td>
+                            <td class="" align="center">
+                                5
+                            </td>
+                            <td class="" align="center">
+                                6
+                            </td>
+                            <td class="" align="center">
+                                7
+                            </td>
+                        <td class="CalWeekendDay" align="center">
+                            8
+                        </td>
+                </tr>
+                <tr>
+                        <td class="CalTodayDay" align="center">
+                            9
+                        </td>
+                            <td class="" align="center">
+                                10
+                            </td>
+                            <td class="" align="center">
+                                11
+                            </td>
+                            <td class="" align="center">
+                                12
+                            </td>
+                            <td class="" align="center">
+                                13
+                            </td>
+                            <td class="" align="center">
+                                14
+                            </td>
+                        <td class="CalWeekendDay" align="center">
+                            15
+                        </td>
+                </tr>
+                <tr>
+                        <td class="CalWeekendDay" align="center">
+                            16
+                        </td>
+                            <td class="" align="center">
+                                17
+                            </td>
+                            <td class="" align="center">
+                                18
+                            </td>
+                            <td class="" align="center">
+                                19
+                            </td>
+                            <td class="" align="center">
+                                20
+                            </td>
+                            <td class="" align="center">
+                                21
+                            </td>
+                        <td class="CalWeekendDay" align="center">
+                            22
+                        </td>
+                </tr>
+                <tr>
+                        <td class="CalWeekendDay" align="center">
+                            23
+                        </td>
+                            <td class="" align="center">
+                                24
+                            </td>
+                            <td class="" align="center">
+                                25
+                            </td>
+                            <td class="" align="center">
+                                26
+                            </td>
+                            <td class="" align="center">
+                                27
+                            </td>
+                            <td class="" align="center">
+                                28
+                            </td>
+                        <td class="CalWeekendDay" align="center">
+                            29
+                        </td>
+                </tr>
+                <tr>
+                        <td class="CalWeekendDay" align="center">
+                            30
+                        </td>
+                            <td class="" align="center">
+                                31
+                            </td>
+                            <td class="CalOtherMonthDay" align="center">
+                                1
+                            </td>
+                            <td class="CalOtherMonthDay" align="center">
+                                2
+                            </td>
+                            <td class="CalOtherMonthDay" align="center">
+                                3
+                            </td>
+                            <td class="CalOtherMonthDay" align="center">
+                                4
+                            </td>
+                        <td class="CalOtherMonthDay" align="center">
+                            5
+                        </td>
+                </tr>
+    </tbody>
+</table></div><script>loadBlogDefaultCalendar();</script>			
+			<div id="leftcontentcontainer">
+				<div id="blog-sidecolumn"><!-- 搜索 -->
+<div id="sidebar_search" class="sidebar-block">
+    <div class="mySearch my-search">
+        <h3 class="catListTitle">搜索</h3>
+        <div id="sidebar_search_box">
+            <div id="widget_my_zzk" class="div_my_zzk">
+                <input type="text" id="q" onkeydown="return zzk_go_enter(event);" class="input_my_zzk">&nbsp;<input onclick="zzk_go()" type="button" value="找找看" id="btnZzk" class="btn_my_zzk">
+            </div>
+            
+        </div>
+    </div>
+</div>
+
+<!-- 常用链接 -->
+<div id="sidebar_shortcut" class="sidebar-block"><div class="catListLink">
+<h3 class="catListTitle">
+常用链接
+</h3>
+<ul>
+    <li><a href="https://www.cnblogs.com/qsyll0916/p/" title="我的博客的随笔列表">我的随笔</a></li>
+<li><a href="https://www.cnblogs.com/qsyll0916/MyComments.html" title="我的发表过的评论列表">我的评论</a></li>
+<li><a href="https://www.cnblogs.com/qsyll0916/OtherPosts.html" title="我评论过的随笔列表">我的参与</a></li>
+<li><a href="https://www.cnblogs.com/qsyll0916/comments" title="我的博客的评论列表">最新评论</a></li>
+<li><a href="https://www.cnblogs.com/qsyll0916/tag/" title="我的博客的标签列表">我的标签</a></li>
+
+</ul>
+</div>
+
+</div>
+
+<!-- 最新随笔 -->
+
+
+<!-- 我的标签 -->
+<div id="sidebar_toptags" class="sidebar-block"><div class="catListTag">
+    <h3 class="catListTitle"><a href="https://www.cnblogs.com/qsyll0916/tag/" class="sidebar-card-title-a">我的标签</a></h3>
+<ul>
+        <li>
+            <a href="https://www.cnblogs.com/qsyll0916/tag/%E5%8D%95%E7%89%87%E6%9C%BA/">单片机<span class="tag-count">(4)</span></a>
+        </li>
+        <li>
+            <a href="https://www.cnblogs.com/qsyll0916/tag/STM32/">STM32<span class="tag-count">(2)</span></a>
+        </li>
+        <li>
+            <a href="https://www.cnblogs.com/qsyll0916/tag/python/">python<span class="tag-count">(2)</span></a>
+        </li>
+        <li>
+            <a href="https://www.cnblogs.com/qsyll0916/tag/c%E8%AF%AD%E8%A8%80/">c语言<span class="tag-count">(2)</span></a>
+        </li>
+        <li>
+            <a href="https://www.cnblogs.com/qsyll0916/tag/%E5%8C%BF%E5%90%8D%E4%B8%8A%E4%BD%8D%E6%9C%BA/">匿名上位机<span class="tag-count">(2)</span></a>
+        </li>
+        <li>
+            <a href="https://www.cnblogs.com/qsyll0916/tag/UART/">UART<span class="tag-count">(1)</span></a>
+        </li>
+        <li>
+            <a href="https://www.cnblogs.com/qsyll0916/tag/PID/">PID<span class="tag-count">(1)</span></a>
+        </li>
+        <li>
+            <a href="https://www.cnblogs.com/qsyll0916/tag/MPU6050/">MPU6050<span class="tag-count">(1)</span></a>
+        </li>
+        <li>
+            <a href="https://www.cnblogs.com/qsyll0916/tag/git/">git<span class="tag-count">(1)</span></a>
+        </li>
+        <li>
+            <a href="https://www.cnblogs.com/qsyll0916/tag/F450/">F450<span class="tag-count">(1)</span></a>
+        </li>
+    <li>
+        <a href="https://www.cnblogs.com/qsyll0916/tag/">更多</a>
+    </li>
+
+</ul>
+</div>
+
+</div>
+
+<!-- 积分与排名 -->
+
+
+<!-- 随笔分类、随笔档案、文章分类、新闻分类、相册、链接 -->
+<div id="sidebar_categories">
+
+    <div id="sidebar_postcategory" class="catListPostCategory sidebar-block">
+        <h3 class="catListTitle">
+            
+    <a class="sidebar-card-title-a" href="https://www.cnblogs.com/qsyll0916/post-categories">随笔分类</a>
+
+
+
+        </h3>
+
+        <ul>
+
+                <li data-category-list-item-visible="true" style="display: block">
+                    
+<a href="https://www.cnblogs.com/qsyll0916/category/986948.html" style="--cnb-category-item-link-indent-size: calc(0 * 1em)" class="category-item-link" rel="" target="">《C语言点滴》笔记(11)</a>
+ 
+                </li>                
+                <li data-category-list-item-visible="true" style="display: block">
+                    
+<a href="https://www.cnblogs.com/qsyll0916/category/1098160.html" style="--cnb-category-item-link-indent-size: calc(0 * 1em)" class="category-item-link" rel="" target="">Altium Designer(1)</a>
+ 
+                </li>                
+                <li data-category-list-item-visible="true" style="display: block">
+                    
+<a href="https://www.cnblogs.com/qsyll0916/category/1193723.html" style="--cnb-category-item-link-indent-size: calc(0 * 1em)" class="category-item-link" rel="" target="">Linux(8)</a>
+ 
+                </li>                
+                <li data-category-list-item-visible="true" style="display: block">
+                    
+<a href="https://www.cnblogs.com/qsyll0916/category/931860.html" style="--cnb-category-item-link-indent-size: calc(0 * 1em)" class="category-item-link" rel="" target="">python(17)</a>
+ 
+                </li>                
+                <li data-category-list-item-visible="true" style="display: block">
+                    
+<a href="https://www.cnblogs.com/qsyll0916/category/931859.html" style="--cnb-category-item-link-indent-size: calc(0 * 1em)" class="category-item-link" rel="" target="">stm32(42)</a>
+ 
+                </li>                
+                <li data-category-list-item-visible="true" style="display: block">
+                    
+<a href="https://www.cnblogs.com/qsyll0916/category/1085200.html" style="--cnb-category-item-link-indent-size: calc(0 * 1em)" class="category-item-link" rel="" target="">读书笔记(3)</a>
+ 
+                </li>                
+                <li data-category-list-item-visible="true" style="display: block">
+                    
+<a href="https://www.cnblogs.com/qsyll0916/category/1101115.html" style="--cnb-category-item-link-indent-size: calc(0 * 1em)" class="category-item-link" rel="" target="">基础还是51(19)</a>
+ 
+                </li>                
+                <li data-category-list-item-visible="true" style="display: block">
+                    
+<a href="https://www.cnblogs.com/qsyll0916/category/1135909.html" style="--cnb-category-item-link-indent-size: calc(0 * 1em)" class="category-item-link" rel="" target="">灵感手环项目(2)</a>
+ 
+                </li>                
+                <li data-category-list-item-visible="true" style="display: block">
+                    
+<a href="https://www.cnblogs.com/qsyll0916/category/1119202.html" style="--cnb-category-item-link-indent-size: calc(0 * 1em)" class="category-item-link" rel="" target="">嵌入式之路(6)</a>
+ 
+                </li>                
+                <li data-category-list-item-visible="true" style="display: block">
+                    
+<a href="https://www.cnblogs.com/qsyll0916/category/959332.html" style="--cnb-category-item-link-indent-size: calc(0 * 1em)" class="category-item-link" rel="" target="">四旋翼的故事(8)</a>
+ 
+                </li>                
+                <li data-category-list-item-visible="true" style="display: block">
+                    
+<a href="https://www.cnblogs.com/qsyll0916/category/947979.html" style="--cnb-category-item-link-indent-size: calc(0 * 1em)" class="category-item-link" rel="" target="">随想(10)</a>
+ 
+                </li>                
+                <li data-category-list-item-visible="true" style="display: block">
+                    
+<a href="https://www.cnblogs.com/qsyll0916/category/1019309.html" style="--cnb-category-item-link-indent-size: calc(0 * 1em)" class="category-item-link" rel="" target="">有趣的 C (15)</a>
+ 
+                </li>                
+                <li data-category-list-item-visible="true" style="display: block">
+                    
+<a href="https://www.cnblogs.com/qsyll0916/category/959333.html" style="--cnb-category-item-link-indent-size: calc(0 * 1em)" class="category-item-link" rel="" target="">自动控制的故事(3)</a>
+ 
+                </li>                
+            
+        </ul>
+
+
+    </div>    
+    <div id="sidebar_postarchive" class="catListPostArchive sidebar-block">
+        <h3 class="catListTitle">
+            
+随笔档案
+
+
+        </h3>
+
+        <ul>
+
+                <li data-category-list-item-visible="true" style="display: block">
+                    
+<a href="https://www.cnblogs.com/qsyll0916/p/archive/2019/01" style="--cnb-category-item-link-indent-size: calc(0 * 1em)" class="category-item-link" rel="" target="">2019年1月(2)</a>
+ 
+                </li>                
+                <li data-category-list-item-visible="true" style="display: block">
+                    
+<a href="https://www.cnblogs.com/qsyll0916/p/archive/2018/09" style="--cnb-category-item-link-indent-size: calc(0 * 1em)" class="category-item-link" rel="" target="">2018年9月(1)</a>
+ 
+                </li>                
+                <li data-category-list-item-visible="true" style="display: block">
+                    
+<a href="https://www.cnblogs.com/qsyll0916/p/archive/2018/08" style="--cnb-category-item-link-indent-size: calc(0 * 1em)" class="category-item-link" rel="" target="">2018年8月(1)</a>
+ 
+                </li>                
+                <li data-category-list-item-visible="true" style="display: block">
+                    
+<a href="https://www.cnblogs.com/qsyll0916/p/archive/2018/07" style="--cnb-category-item-link-indent-size: calc(0 * 1em)" class="category-item-link" rel="" target="">2018年7月(1)</a>
+ 
+                </li>                
+                <li data-category-list-item-visible="true" style="display: block">
+                    
+<a href="https://www.cnblogs.com/qsyll0916/p/archive/2018/06" style="--cnb-category-item-link-indent-size: calc(0 * 1em)" class="category-item-link" rel="" target="">2018年6月(4)</a>
+ 
+                </li>                
+                <li data-category-list-item-visible="true" style="display: block">
+                    
+<a href="https://www.cnblogs.com/qsyll0916/p/archive/2018/05" style="--cnb-category-item-link-indent-size: calc(0 * 1em)" class="category-item-link" rel="" target="">2018年5月(4)</a>
+ 
+                </li>                
+                <li data-category-list-item-visible="true" style="display: block">
+                    
+<a href="https://www.cnblogs.com/qsyll0916/p/archive/2018/04" style="--cnb-category-item-link-indent-size: calc(0 * 1em)" class="category-item-link" rel="" target="">2018年4月(12)</a>
+ 
+                </li>                
+                <li data-category-list-item-visible="true" style="display: block">
+                    
+<a href="https://www.cnblogs.com/qsyll0916/p/archive/2018/03" style="--cnb-category-item-link-indent-size: calc(0 * 1em)" class="category-item-link" rel="" target="">2018年3月(10)</a>
+ 
+                </li>                
+                <li data-category-list-item-visible="true" style="display: block">
+                    
+<a href="https://www.cnblogs.com/qsyll0916/p/archive/2018/02" style="--cnb-category-item-link-indent-size: calc(0 * 1em)" class="category-item-link" rel="" target="">2018年2月(1)</a>
+ 
+                </li>                
+                <li data-category-list-item-visible="true" style="display: block">
+                    
+<a href="https://www.cnblogs.com/qsyll0916/p/archive/2018/01" style="--cnb-category-item-link-indent-size: calc(0 * 1em)" class="category-item-link" rel="" target="">2018年1月(3)</a>
+ 
+                </li>                
+                <li data-category-list-item-visible="true" style="display: block">
+                    
+<a href="https://www.cnblogs.com/qsyll0916/p/archive/2017/12" style="--cnb-category-item-link-indent-size: calc(0 * 1em)" class="category-item-link" rel="" target="">2017年12月(10)</a>
+ 
+                </li>                
+                <li data-category-list-item-visible="true" style="display: block">
+                    
+<a href="https://www.cnblogs.com/qsyll0916/p/archive/2017/11" style="--cnb-category-item-link-indent-size: calc(0 * 1em)" class="category-item-link" rel="" target="">2017年11月(13)</a>
+ 
+                </li>                
+                <li data-category-list-item-visible="true" style="display: block">
+                    
+<a href="https://www.cnblogs.com/qsyll0916/p/archive/2017/10" style="--cnb-category-item-link-indent-size: calc(0 * 1em)" class="category-item-link" rel="" target="">2017年10月(15)</a>
+ 
+                </li>                
+                <li data-category-list-item-visible="true" style="display: block">
+                    
+<a href="https://www.cnblogs.com/qsyll0916/p/archive/2017/09" style="--cnb-category-item-link-indent-size: calc(0 * 1em)" class="category-item-link" rel="" target="">2017年9月(8)</a>
+ 
+                </li>                
+                <li data-category-list-item-visible="true" style="display: block">
+                    
+<a href="https://www.cnblogs.com/qsyll0916/p/archive/2017/08" style="--cnb-category-item-link-indent-size: calc(0 * 1em)" class="category-item-link" rel="" target="">2017年8月(2)</a>
+ 
+                </li>                
+                <li data-category-list-item-visible="false" style="display: none">
+                    
+<a href="https://www.cnblogs.com/qsyll0916/p/archive/2017/07" style="--cnb-category-item-link-indent-size: calc(0 * 1em)" class="category-item-link" rel="" target="">2017年7月(1)</a>
+ 
+                </li>                
+                <li data-category-list-item-visible="false" style="display: none">
+                    
+<a href="https://www.cnblogs.com/qsyll0916/p/archive/2017/06" style="--cnb-category-item-link-indent-size: calc(0 * 1em)" class="category-item-link" rel="" target="">2017年6月(6)</a>
+ 
+                </li>                
+                <li data-category-list-item-visible="false" style="display: none">
+                    
+<a href="https://www.cnblogs.com/qsyll0916/p/archive/2017/05" style="--cnb-category-item-link-indent-size: calc(0 * 1em)" class="category-item-link" rel="" target="">2017年5月(4)</a>
+ 
+                </li>                
+                <li data-category-list-item-visible="false" style="display: none">
+                    
+<a href="https://www.cnblogs.com/qsyll0916/p/archive/2017/04" style="--cnb-category-item-link-indent-size: calc(0 * 1em)" class="category-item-link" rel="" target="">2017年4月(13)</a>
+ 
+                </li>                
+                <li data-category-list-item-visible="false" style="display: none">
+                    
+<a href="https://www.cnblogs.com/qsyll0916/p/archive/2017/03" style="--cnb-category-item-link-indent-size: calc(0 * 1em)" class="category-item-link" rel="" target="">2017年3月(14)</a>
+ 
+                </li>                
+                <li data-category-list-item-visible="false" style="display: none">
+                    
+<a href="https://www.cnblogs.com/qsyll0916/p/archive/2017/02" style="--cnb-category-item-link-indent-size: calc(0 * 1em)" class="category-item-link" rel="" target="">2017年2月(14)</a>
+ 
+                </li>                
+                <li data-category-list-item-visible="false" style="display: none">
+                    
+<a href="https://www.cnblogs.com/qsyll0916/p/archive/2017/01" style="--cnb-category-item-link-indent-size: calc(0 * 1em)" class="category-item-link" rel="" target="">2017年1月(5)</a>
+ 
+                </li>                
+                <li data-category-list-item-visible="false" style="display: none">
+                    
+<a href="https://www.cnblogs.com/qsyll0916/p/archive/2016/12" style="--cnb-category-item-link-indent-size: calc(0 * 1em)" class="category-item-link" rel="" target="">2016年12月(7)</a>
+ 
+                </li>                
+            <li>
+                <a href="javascript:void(0)" onclick="sideColumnManager.loadMore(this)">更多</a>
+            </li>
+        </ul>
+
+
+    </div>    
+</div>
+
+<!-- 最新评论 -->
+<!-- 阅读排行榜 -->
+<div id="sidebar_topviewedposts" class="sidebar-block"><div class="catListView">
+    <h3 class="catListTitle">
+        <a href="https://www.cnblogs.com/qsyll0916/most-viewed" class="sidebar-card-title-a">
+    阅读排行榜
+</a>
+
+    </h3>
+    <div id="TopViewPostsBlock">
+        <ul style="word-break:break-all">
+                    <li>
+                        <a href="https://www.cnblogs.com/qsyll0916/p/7712695.html">
+                            1. 关于时钟模块DS1302的使用心得(83901)
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.cnblogs.com/qsyll0916/p/6964638.html">
+                            2. stm32与HC-SR04超声波传感器测距(54687)
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.cnblogs.com/qsyll0916/p/8580211.html">
+                            3. 漫谈PID——实现与调参(49390)
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.cnblogs.com/qsyll0916/p/7496886.html">
+                            4. 算法学习之快速排序的C语言实现(45567)
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.cnblogs.com/qsyll0916/p/7788475.html">
+                            5. 关于串口通信波特率的几点思考(40178)
+                        </a>
+                    </li>
+        </ul>
+    </div>
+</div></div>
+
+<!-- 评论排行榜 -->
+<div id="sidebar_topcommentedposts" class="sidebar-block"><div class="catListFeedback">
+    <h3 class="catListTitle">
+        <a href="https://www.cnblogs.com/qsyll0916/most-commented" class="sidebar-card-title-a">评论排行榜</a>
+
+    </h3>
+    <div id="TopFeedbackPostsBlock">
+        <ul style="word-break:break-all">
+                    <li>
+                        <a href="https://www.cnblogs.com/qsyll0916/p/6964638.html">
+                            1. stm32与HC-SR04超声波传感器测距(12)
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.cnblogs.com/qsyll0916/p/8088102.html">
+                            2. 灵感手环第一步——0.96寸OLED显示实验(5)
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.cnblogs.com/qsyll0916/p/8447481.html">
+                            3. C语言实现简易2048小游戏(4)
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.cnblogs.com/qsyll0916/p/6504303.html">
+                            4. stm32通过电调带动电机（可按键调速）(4)
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.cnblogs.com/qsyll0916/p/8893790.html">
+                            5. python3+dlib人脸识别及情绪分析(3)
+                        </a>
+                    </li>
+        </ul>
+    </div>
+</div></div>
+
+<!-- 推荐排行榜 -->
+<div id="sidebar_topdiggedposts" class="sidebar-block">
+<div id="topdigg_posts_wrap">
+    <div class="catListView">
+        <h3 class="catListTitle">
+            <a href="https://www.cnblogs.com/qsyll0916/most-liked" class="sidebar-card-title-a">推荐排行榜</a>
+
+        </h3>
+        <div id="TopDiggPostsBlock">
+            <ul style="word-break: break-all">
+                        <li>
+                            <a href="https://www.cnblogs.com/qsyll0916/p/8580211.html">
+                                1. 漫谈PID——实现与调参(10)
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.cnblogs.com/qsyll0916/p/8030379.html">
+                                2. MPU6050滤波、姿态融合（一阶互补、卡尔曼）(6)
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.cnblogs.com/qsyll0916/p/8893790.html">
+                                3. python3+dlib人脸识别及情绪分析(5)
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.cnblogs.com/qsyll0916/p/8447481.html">
+                                4. C语言实现简易2048小游戏(5)
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.cnblogs.com/qsyll0916/p/7000471.html">
+                                5. stm32的VCC/VDD/VSS/VEE/VBAT的区别(5)
+                            </a>
+                        </li>
+            </ul>
+        </div>
+    </div>
+</div></div><div id="sidebar_recentcomments" class="sidebar-block"><div class="catListComment">
+<h3 class="catListTitle"><a href="https://www.cnblogs.com/qsyll0916/comments" class="sidebar-card-title-a">最新评论</a></h3>
+    <div class="RecentCommentBlock">
+        <ul>
+                <li class="recent_comment_title"><a href="https://www.cnblogs.com/qsyll0916/p/7000471.html">1. Re:stm32的VCC/VDD/VSS/VEE/VBAT的区别</a></li>
+                <li class="recent_comment_body"><p>清晰易懂；</p>
+</li>
+                <li class="recent_comment_author">--caesura_k</li>
+                <li class="recent_comment_title"><a href="https://www.cnblogs.com/qsyll0916/p/6964638.html">2. Re:stm32与HC-SR04超声波传感器测距</a></li>
+                <li class="recent_comment_body"><p>楼主，不会写头文件，可以给我一份完整的代码吗。邮箱是2805284437@qq.co，谢谢</p>
+</li>
+                <li class="recent_comment_author">--向一abc</li>
+                <li class="recent_comment_title"><a href="https://www.cnblogs.com/qsyll0916/p/7158098.html">3. Re:前辈们的话--大疆技术总监的金玉良言</a></li>
+                <li class="recent_comment_body"><p>膜拜大佬666</p>
+</li>
+                <li class="recent_comment_author">--小武666</li>
+                <li class="recent_comment_title"><a href="https://www.cnblogs.com/qsyll0916/p/6230529.html">4. Re:大学坑真多</a></li>
+                <li class="recent_comment_body"><p>同时遇到的这样的事情哎</p>
+</li>
+                <li class="recent_comment_author">--yezi66</li>
+                <li class="recent_comment_title"><a href="https://www.cnblogs.com/qsyll0916/p/7793441.html">5. Re:51串口发送字符串</a></li>
+                <li class="recent_comment_body"><p>111</p>
+</li>
+                <li class="recent_comment_author">--GouZi1054</li>
+        </ul>
+    </div>
+</div>
+
+</div>
+
+
+</div>
+                    <script>loadBlogSideColumn();</script>
+			</div>			
+		</div><!--end: sideBarMain -->
+	</div><!--end: sideBar 侧边栏容器 -->
+	<div class="clear"></div>
+	</div><!--end: main -->
+	<div class="clear"></div>
+	<div id="footer">
+		<!--done-->
+Copyright © 2025 Andrew_qian
+<br><span id="poweredby">Powered by .NET 9.0 on Kubernetes</span>
+
+
+
+	</div><!--end: footer -->
+</div><!--end: home 自定义的最大容器 -->
+
+
+
+    
+
+    <input type="hidden" id="antiforgery_token" value="CfDJ8KL9kPW-LSFBi_9YdTzcC092HEznqvoXBFcXR2o7fO904P_CgA26dNlHnIwqYCmewQRhShdHoD7PhGh73_NWcKzjSYIzZhqMP9kRfxxZCfJ4wHEOHfiwMIEnATDz9DsnG8bEo5AHXZ20y01rocf_U_0">
+    <script async="" src="./MPU6050滤波、姿态融合（一阶互补、卡尔曼） - Andrew_qian - 博客园_files/js"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-M95P3TTWJZ');
+</script>
+<script defer="" src="./MPU6050滤波、姿态融合（一阶互补、卡尔曼） - Andrew_qian - 博客园_files/hm.js.下载"></script>
+
+
+<div style="z-index: 998; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.6); display: none; flex-direction: column; align-items: center; justify-content: center">
+<div style="background: #fff;padding: 30px; margin: 30px; border-radius: 16px;">
+  <div style="width: 200px; height: 200px; background: rgba(255, 255, 255, 0.8); position: absolute; top: -100px; right: -100px; border-radius: 100px"></div>
+  <div style="text-align: center; font-size: 18px; margin-bottom: 10px;">点击右上角即可分享</div>
+  <img src="./MPU6050滤波、姿态融合（一阶互补、卡尔曼） - Andrew_qian - 博客园_files/35695-20230906145857937-1471873834.gif" alt="微信分享提示">
+</div>   
+    </div><div id="wetab-content-root"><wetab-chat-screenshot style="position: relative; z-index: 2147483647;"><template shadowrootmode="open"><link rel="stylesheet" href="chrome-extension://bpelnogcookhocnaokfpoeinibimbeff/content.css"><style id="theme_style">
+  :host {
+    --color-black:0 0 0;--color-white:255 255 255;--color-blue:74 122 255;--color-green:52 199 89;--color-yellow:255 149 0;--color-orange:255 155 48;--color-red:255 77 79;--color-t1:28 28 30;--color-t2:58 58 60;--color-t3:142 142 148;--color-t4:199 199 204;--color-t5:255 255 255;--color-b1:209 209 214;--color-b2:229 229 234;--color-b3:248 248 248;--color-b4:255 255 255;--color-b5:255 255 255;--color-m1:255 255 255;--color-m2:0 0 0;--color-todo-t1:47 87 255;--color-todo-t2:83 147 255;--color-note-t1:192 131 93;--color-note-t2:198 174 159;--color-calc-t1:255 255 255;--color-calc-t2:200 200 204;--color-calc-t3:142 142 148;--color-calc-t4:94 94 98;--color-calc-b1:75 78 84;--color-calc-b2:50 52 57;--color-calc-b3:34 36 39;--color-calc-l1:254 189 95;--color-calc-l2:251 132 54;--color-calc-l3:96 99 107;--color-calc-l4:58 60 66;--color-calc-l6:32 33 38;--color-calc-l7:81 84 90;--color-calc-l5:63 65 72;--color-calc-l8:72 74 79;--color-calc-l0:40 41 45;--color-calc-l9:252 163 36;--color-calc-yellow:240 168 16;--color-calendar-red:255 77 79;--color-calendar-b1:255 101 101;--color-calendar-b2:255 246 241;--color-worldcup-t1:168 238 65;--color-rate-t1:28 28 30;--color-rate-t2:58 58 60;--color-rate-t3:141 142 148;--color-rate-t4:109 147 229;--color-rate-b1:255 255 255;--color-rate-b2:248 248 248;--color-rate-b3:34 36 39;--color-rate-b4:55 69 157;--color-rate-b5:238 240 239;--color-rate-l1:70 154 255;--color-rate-l2:72 90 188;--color-game-b1:38 42 53;--color-game-b2:70 74 88;--color-game-b3:23 26 34;--color-game-b4:44 47 59;--color-game-b5:20 174 60;--color-game-t1:200 200 204;--color-game-t2:142 142 148;--color-movie-b1:94 104 71;--color-clock-b1:22 21 28;--color-wclock-b1:19 20 21;--color-wclock-t1:37 216 27;--color-wclock-t2:47 142 42;--color-wclock-t3:30 82 27;--color-bookmark-t1:98 173 91;--color-bookmark-b1:248 248 248;--color-bookmark-b2:255 255 255;--color-record-t1:255 115 48;--color-image-t1:68 10 214;--color-image-b1:0 0 0;--color-image-b2:255 255 255;--color-image-b4:17 17 17;--color-translate-green:36 161 81;--color-tomato-work:244 78 33;--color-tomato-rest:54 168 106;--color-write-t1:69 116 246;--color-write-blue:48 101 246;--color-settings-blue:0 122 255
+   }
+  </style><div class="module-app" data-v-app=""><div class="z-[2147483647]"><div class="handle fixed bottom-[24px] hidden w-fit items-end gap-y-[8px] flex-col z-[2147483647]"><div class="action-list mr-[4px] flex flex-col-reverse rounded-full bg-color-b1 p-[4px] z-[2147483644]"><span class="action s-trans inline-flex cursor-pointer items-center justify-center rounded-full p-[6px] transition-colors hover:bg-[#EFF2FA]" style="box-shadow: rgba(99, 99, 99, 0.1) 0px 2px 8px 0px;"><i class="iconfont !text-[20px] !leading-[1] i:screenshot-20-outline-bold"></i></span></div><div class="relative hidden w-[48px] cursor-pointer items-center justify-center whitespace-nowrap break-keep rounded-l-full bg-color-b1 px-[14px] py-[10px] ring-0 transition-all" style="box-shadow: rgba(99, 99, 99, 0.1) 0px 2px 8px 0px; user-select: none;"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAAEgBckRAAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAMKADAAQAAAABAAAAMAAAAADbN2wMAAAIOklEQVRoBe1ZW2xcRxn+z+76hu21HTcXN03jkEBQaCoFiRhQHRCloY1SVEW9PERJHQcqQuK6UQNRaGgCRlWr9IE08EAlJG4PSBTxACjioUgJLzUvFSSqkjT1NbGdjS+76/Wuvbfh+/5zZn12s3YBqSKCHWnOzPz3+ef2zxyR/yg922MMGYeG3bLreWMCBGSzItfeNyaXQ3ndmExGRBErwlEhy8aPO444IhkQfhTp1i3z6h1y9x4y5n1Yw8w6CWCDyJVrxsAeCcDGPMCbN7H1kaeJ2+bX5ZQUdO87ArtA8csfO871IdRhG83eBO/tO+x24Fc/cRx1LSVl4efjh41cuWpMHq418H8e+SrG4r7VMR0X0hU0jI2Zr3NkKHjtGudnREYi5qFMXjaDyIlG8/VbPhU8S/j/RHrup6bqX+2IujX9nlzr6TFhyzQ4YgyzbXf1mIu2rgz0e9RIjEwfDLjjQBhcffLZI+ZCLi+dliHECgCaVm+cj+VytToLKX42KX0zMylpDNe5BPi6GoBNL2TkycdrdTEpP2Ac1dderpO8J5BcLgMAfSeqhLOaublRngImq51A+7u9ixxq0v6nkr8IN37sBgiUZtUq5y0Ie+vmhDlIqY4EqKyS7koPdPWawZ7Ti1O21MiRMRMZvmFMImG2luJs+8Dzi9OaMJ0WFslJEZ+SGPZ/wcJoOnfOiRM3N2faJiIyll1AAzMvMiX/GBo1N9vXOfdZXvBcxOrp5D7rT0UKclgvdpOawVra05WT118OXB6fkAe49LhR696GeYuZuJZnzQ/P5t/N5wPb7HKSxTmtenQlWI1ZIEnIHJ2JySsnAjyLHmCbhuX4QeYs1+WEyku9gW0HnslKNp3XTdW/zCi3SAGt5M775O6UnPl+E/GLicKRqqvlvO7vblO/97aF5NS3A5JKJgobg0UXLbmnv2EG+45LO9ezgdVE2oOgqlr64fPPkdEYE7o+IBndsUhre4Xy75cS8syexiK5VlmlrHig4oG7wQMTEaNx2XK2nD5tqv34or2o+wXzjh/pr8fj5pMLC9I9Mmpm/HB//dgxUz8clVE/rEgBwvwOHBhllUxF5So3Quw7zRMT5kd+IaxT+GRaEro/+ZBFCgjHgdGBC0aRkuFRM8DNz8NLcl56Z2bMehfiCr+94Aq3dBZXpICnES3Ant6x/4irZHzcHEtnZAPAFqe3g6lpGaIQWn4rJQmeA8zL98AVroTsyd5D6cuJhJyhVXqSeXi7lX8waK4MTOYSVjmFL98DzwISxqPzcupo6NNkZgIK3J6FKNlbjNnm7duyekipcOJJ50tFLiKSjFmckUcOBlHHueE7OgrMqFAhhT7xWI0kZ2Nat0p88kuOTK8H69bEZd1aROk+4WSiAMK09Nqsv/K9sKTTaYXTQH8q7gGQqdScdO9tdmk8YstTUyN/UYRfMeoOQoz9T+PQB6FVbpUUKSBB3/E6DU9oqcoBTOPugOTXr3MeDoflccUBGQi6OArbvKlW2u65cw0WKfjaI7OIGgIqMAiM4xOwqV3qKWjNSueP6MlFMtIAKme8xHSou2X5qOK9K6a3OSxzHBn21mVDqFIj11e2OBdsm6W9DAhWNwyhLk2XLiXbv/pI/UnbrpQVD1Q8UPFAxQP/1x7ARTSMvOK/4oSDL5jfLPck8mFGTc6YfcM3TR7Z3J42z30Y/VJ4xozdR81vl8IXDtFSAr7p4Djmdb+/oUV2njvtPrmU0pW2ef0fG5e30znZwbCMTwRUUhWS/rY18iXHceZLecq1afhUGu8VgtdLRyI/P+usLkfnBRplUF4sgQCqg29HB3rNO/531TIcMj1tHhsekSSi8B2MMjQkce8SgvfPjqERSdyaNHvK8VoYDecbLa8BiM86GcCVBtKWlmXRO5QfweBuMSDSALojJhLDdaG/ycGIeI9glufmmPk9XpaeIJsdVsZiTGqE65DgXEJ+d2PMnF/bJrsxGgydNdFwGH0+Mr/4Xmxxy5VW1x00+GMwCGA7EdYo1wZC1Ct/w2veo32vyieiU/I2iBo0xqdEEHJold52gvE6pxNNJj4oqdp6efTk6/Luwqz5UyDgdFr5noiCI8ARwZ+Lf38KcRTsSNiSyjN4lIvHFrbveDg7PR2Rfgxxg17KaCSnDhLpref5Z0r5ifesxF+rurm4XNj1UC4ej6U705CpPaZOr5P2sud6wpVb+l1yDfB1sSCQSikYOTWfkYa6pPzgeJVs2xoqGEl3KRnpwKsGW1eCnYvZzmWvj0rz4JYg3vurpakhKclk2uUDvfKjZPLXXcjid8kO0BgyMtNrLBOzc7Lzi1k5drhB6mp9rDQeeNqrH1aQrScVhk4RbEdAG167ptqRo99skN1fyUkinnCdAnrS2gzSsmnJRQxeWODxQHMgPyUnepukKexjAbxgOEjJQyPLJeKU1kdQ2v7C9jp5cEtOzr45jWfYFSqPsuxmUE6uz40laPYeoBzc+NmtUTn1nVZpbgq5/2NghO7vnsVa+AxjL7Dvj6+6Rza2tMj9uEGOEqaGsIRc5YF2C2ObuaExKC+9uEI+/5k4ng5y7ghYRwJfmpbsAIc/5CzIt7oysmtnc8Eb1M6fSvzHaY2iEK+p8utr5Y0N6517m5udgdZWZ3TjBuf+ulo5o52m9UhaUA4y5QV9V2Tid345LD0HsxIKpNxXfgLLJJVTBi6vvTE7uWdXfSt/zdI4KuGQa0JdGT1urg/eveHpmZWtsqOx0bnsURYVt/EKNzstf8VD2SorigR0MEVRvnWGf3r94c9zsy8ebij8nCRPJVU8UPFAxQN3hwf+CagI4zojNrTOAAAAAElFTkSuQmCC" alt="" width="20" height="20" class="rounded-full"><!----><!----></div></div></div><div class="tool p-screenshot __cg_ss_action_wrapper__ fixed flex flex-col items-start gap-y-[8px] rounded-[4px] p-[4px] z-[2147483647]" style="display: none;"><div class="flex items-center rounded-[6px] bg-color-b5 px-[12px] py-[8px]"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="hi-iconify handle cursor-move text-[16px] text-color-t3 handle cursor-move text-[16px] text-color-t3 iconify iconify--i" width="1em" height="1em" viewBox="0 0 16 16"><path fill="currentColor" d="M7 3q0 .074-.007.147t-.022.146-.036.142-.05.139q-.027.068-.062.133t-.076.126-.087.119-.1.109-.108.099q-.057.046-.119.087-.06.041-.126.076-.065.035-.133.063t-.139.05q-.07.02-.142.035-.073.015-.146.022T5.5 4.5t-.147-.007-.146-.022q-.072-.014-.142-.036t-.139-.05-.133-.062-.126-.076q-.062-.04-.119-.087t-.109-.1-.099-.108-.087-.119-.076-.126-.063-.133-.05-.139q-.02-.07-.035-.142-.015-.073-.022-.146T4 3t.007-.147.022-.146.036-.142q.021-.07.05-.139.027-.068.062-.133t.076-.126.087-.119.1-.109.108-.099q.057-.046.119-.087.06-.041.126-.076.065-.035.133-.063t.139-.05q.07-.02.142-.035.073-.015.146-.022T5.5 1.5t.147.007.146.022q.072.014.142.036t.139.05.133.062.126.076q.062.04.119.087t.109.1.099.108.087.119.076.126.063.133.05.139q.02.07.035.142.015.073.022.146T7 3m0 5q0 .074-.007.147t-.022.146-.036.142-.05.139q-.027.068-.062.133t-.076.126-.087.119-.1.109-.108.099q-.057.046-.119.087-.06.041-.126.076-.065.035-.133.063t-.139.05q-.07.02-.142.035-.073.015-.146.022T5.5 9.5t-.147-.007-.146-.022q-.072-.014-.142-.036t-.139-.05-.133-.062-.126-.076q-.062-.04-.119-.087t-.109-.1-.099-.108-.087-.119-.076-.126-.063-.133-.05-.139q-.02-.07-.035-.142-.015-.073-.022-.146T4 8t.007-.147.022-.146q.014-.072.036-.142t.05-.139.062-.133.076-.126q.04-.062.087-.119t.1-.109.108-.099.119-.087.126-.076.133-.063.139-.05q.07-.02.142-.035.073-.015.146-.022T5.5 6.5t.147.007.146.022q.072.014.142.036t.139.05.133.062.126.076q.062.04.119.087t.109.1.099.108.087.119.076.126.063.133.05.139q.02.07.035.142.015.073.022.146T7 8m0 5q0 .074-.007.147t-.022.146-.036.142-.05.139q-.027.068-.062.133t-.076.126-.087.119-.1.109-.108.098q-.057.047-.119.088-.06.041-.126.076-.065.035-.133.063t-.139.05q-.07.02-.142.035-.073.015-.146.022T5.5 14.5t-.147-.007-.146-.022q-.072-.014-.142-.036t-.139-.05-.133-.062-.126-.076q-.062-.04-.119-.088-.057-.046-.109-.098t-.099-.11-.087-.118q-.041-.06-.076-.126-.035-.065-.063-.133t-.05-.139q-.02-.07-.035-.142-.015-.073-.022-.146T4 13t.007-.147.022-.146q.014-.072.036-.142t.05-.139.062-.133.076-.126q.04-.062.087-.119t.1-.109.108-.098q.057-.047.119-.088.06-.041.126-.076.065-.035.133-.063t.139-.05q.07-.02.142-.035.073-.015.146-.022T5.5 11.5t.147.007.146.022q.072.014.142.036t.139.05.133.062.126.076q.062.04.119.088.057.046.109.098t.099.11.087.118q.041.06.076.126.035.065.063.133t.05.139q.02.07.035.142.015.073.022.146T7 13m5-10q0 .074-.007.147t-.022.146-.036.142-.05.139q-.027.068-.062.133t-.076.126-.087.119-.1.109-.108.099q-.057.046-.119.087-.06.041-.126.076-.065.035-.133.063t-.139.05q-.07.02-.142.035-.073.015-.146.022T10.5 4.5t-.147-.007-.146-.022q-.072-.014-.142-.036t-.139-.05-.133-.062-.126-.076q-.062-.04-.119-.087t-.109-.1-.099-.108-.087-.119-.076-.126-.063-.133-.05-.139q-.02-.07-.035-.142-.015-.073-.022-.146T9 3t.007-.147.022-.146.036-.142q.021-.07.05-.139.027-.068.062-.133t.076-.126.087-.119.1-.109.108-.099q.057-.046.119-.087.06-.041.126-.076.065-.035.133-.063t.139-.05q.07-.02.142-.035.073-.015.146-.022T10.5 1.5t.147.007.146.022.142.036q.07.021.139.05.068.027.133.062t.126.076.119.087.109.1.099.108q.046.057.087.119.041.06.076.126.035.065.063.133t.05.139q.02.07.035.142.015.073.022.146T12 3m0 5q0 .074-.007.147t-.022.146-.036.142-.05.139q-.027.068-.062.133t-.076.126-.087.119-.1.109-.108.099q-.057.046-.119.087-.06.041-.126.076-.065.035-.133.063t-.139.05q-.07.02-.142.035-.073.015-.146.022T10.5 9.5t-.147-.007-.146-.022q-.072-.014-.142-.036t-.139-.05-.133-.062-.126-.076q-.062-.04-.119-.087t-.109-.1-.099-.108-.087-.119-.076-.126-.063-.133-.05-.139q-.02-.07-.035-.142-.015-.073-.022-.146T9 8t.007-.147.022-.146q.014-.072.036-.142t.05-.139.062-.133.076-.126q.04-.062.087-.119t.1-.109.108-.099.119-.087.126-.076.133-.063.139-.05q.07-.02.142-.035.073-.015.146-.022T10.5 6.5t.147.007.146.022.142.036q.07.021.139.05.068.027.133.062t.126.076.119.087.109.1.099.108q.046.057.087.119.041.06.076.126.035.065.063.133t.05.139q.02.07.035.142.015.073.022.146T12 8m0 5q0 .074-.007.147t-.022.146-.036.142-.05.139q-.027.068-.062.133t-.076.126-.087.119-.1.109-.108.098q-.057.047-.119.088-.06.041-.126.076-.065.035-.133.063t-.139.05q-.07.02-.142.035-.073.015-.146.022t-.147.007-.147-.007-.146-.022q-.072-.014-.142-.036t-.139-.05-.133-.062-.126-.076q-.062-.04-.119-.088-.057-.046-.109-.098t-.099-.11-.087-.118q-.041-.06-.076-.126-.035-.065-.063-.133t-.05-.139q-.02-.07-.035-.142-.015-.073-.022-.146T9 13t.007-.147.022-.146q.014-.072.036-.142t.05-.139.062-.133.076-.126q.04-.062.087-.119t.1-.109.108-.098q.057-.047.119-.088.06-.041.126-.076.065-.035.133-.063t.139-.05q.07-.02.142-.035.073-.015.146-.022t.147-.007.147.007.146.022.142.036.139.05.133.062.126.076.119.088q.057.046.109.098t.099.11.087.118q.041.06.076.126.035.065.063.133t.05.139q.02.07.035.142.015.073.022.146T12 13"></path></svg><span class="ml-[4px] flex items-center gap-x-[8px]"><div class="s-trans cursor-pointer rounded-[6px] p-[4px] leading-[0] transition-colors hover:bg-color-m2/[0.08]"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="hi-iconify text-[16px] leading-[16px] text-color-t2 text-[16px] leading-[16px] text-color-t2 iconify iconify--i" width="1em" height="1em" viewBox="0 0 16 16"><path fill="currentColor" fill-rule="evenodd" d="M13.465 1.4c-.489-.26-.973-.4-2.31-.4h-6.31c-1.336 0-1.821.14-2.31.4A2.73 2.73 0 001.4 2.536c-.261.488-.4.973-.4 2.309v6.31c0 1.337.14 1.821.4 2.31.262.49.646.873 1.135 1.134.489.262.974.401 2.31.401h6.31c1.337 0 1.821-.14 2.31-.4a2.73 2.73 0 001.134-1.135c.262-.489.401-.973.401-2.31v-6.31c0-1.336-.14-1.821-.4-2.31A2.73 2.73 0 0013.464 1.4M4.643 2.5h6.714l.182.004c.694.015.954.078 1.219.22.227.121.397.29.519.518.165.309.223.611.223 1.604v6.308c0 .993-.058 1.295-.223 1.604a1.23 1.23 0 01-.52.519c-.308.165-.61.223-1.603.223H4.846c-.993 0-1.295-.058-1.604-.223a1.23 1.23 0 01-.519-.52c-.153-.286-.214-.567-.222-1.4V4.643c.008-.833.07-1.114.222-1.4a1.23 1.23 0 01.52-.52c.286-.153.567-.214 1.4-.222"></path></svg></div><!----><div class="s-trans cursor-pointer rounded-[6px] p-[4px] leading-[0] transition-colors hover:bg-color-m2/[0.08]"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="hi-iconify text-[16px] leading-[16px] text-color-t2 text-[16px] leading-[16px] text-color-t2 iconify iconify--i" width="1em" height="1em" viewBox="0 0 16 16"><path fill="currentColor" fill-rule="evenodd" d="M8 15q.172 0 .343-.008t.343-.026.341-.042.339-.058.335-.076.331-.091.326-.108.32-.124q.16-.066.315-.14.155-.072.307-.154.151-.08.299-.169.147-.088.29-.184.143-.095.28-.197.139-.103.272-.212t.26-.224.249-.237q.121-.122.237-.25.115-.126.224-.26.11-.132.212-.27t.197-.281.184-.29.17-.3q.08-.15.154-.306.073-.155.14-.314.065-.159.123-.32.058-.163.108-.327t.091-.331.076-.335q.033-.169.058-.339t.042-.34.026-.344T15 8t-.008-.343q-.009-.172-.026-.343t-.042-.341-.058-.339q-.034-.168-.076-.335t-.091-.331-.108-.326-.124-.32q-.066-.16-.14-.315-.072-.155-.154-.307-.08-.151-.169-.299-.088-.147-.184-.29-.095-.143-.197-.28-.103-.139-.212-.272t-.224-.26-.237-.249q-.122-.121-.25-.237-.126-.115-.26-.224-.132-.11-.27-.211-.138-.103-.281-.198t-.29-.184-.3-.17q-.15-.08-.306-.154-.155-.073-.314-.14-.159-.065-.32-.123-.163-.058-.327-.108t-.331-.091-.335-.075-.339-.06q-.17-.024-.34-.041-.172-.017-.344-.026T8 1t-.343.008q-.172.009-.343.026t-.341.042-.339.059-.335.075-.331.091-.326.108-.32.124-.315.14q-.155.073-.307.154-.151.08-.299.169-.147.088-.29.184-.143.095-.28.198-.139.102-.272.21-.133.11-.26.225-.127.116-.249.237-.121.122-.237.25-.115.126-.224.26-.11.132-.211.27-.103.138-.198.281t-.184.29-.17.3q-.08.15-.154.306-.073.155-.14.314-.065.159-.123.32-.058.163-.108.327t-.091.331-.075.335q-.034.169-.06.339-.024.17-.041.34-.017.172-.026.344T1 8t.008.343q.009.172.026.343t.042.341.059.339.075.335.091.331.108.326.124.32q.066.16.14.315.073.155.154.307.08.151.169.299.088.147.184.29.095.143.198.28.102.139.21.272.11.133.225.26.116.127.237.249.122.121.25.237.126.115.26.224.132.11.27.212t.281.197.29.184.3.17q.15.08.306.154.155.073.314.14.159.065.32.123.163.058.327.108t.331.091.335.076q.169.033.339.058t.34.042.344.026T8 15m0-1.5q.135 0 .27-.007.135-.006.27-.02.133-.013.267-.033t.266-.046.263-.059.26-.072q.13-.039.257-.085.127-.045.252-.097.124-.051.247-.11.122-.057.24-.12.12-.064.236-.134.115-.069.228-.144.112-.075.22-.155.109-.08.213-.166t.205-.177.195-.186q.096-.095.186-.195t.177-.205q.085-.104.166-.213.08-.108.155-.22.075-.113.144-.228.07-.116.134-.235.063-.12.12-.241.059-.123.11-.247.052-.125.098-.252.045-.127.084-.256.04-.13.072-.26.033-.132.06-.264t.046-.266.032-.268.02-.27Q13.5 8.135 13.5 8t-.007-.27-.02-.27q-.013-.133-.033-.267t-.046-.266-.059-.263-.072-.26q-.039-.13-.085-.257-.045-.127-.097-.252-.051-.124-.11-.247-.057-.122-.12-.24-.064-.12-.134-.236-.069-.115-.144-.228-.075-.112-.155-.22-.08-.109-.166-.213-.086-.105-.177-.205-.09-.1-.186-.195-.095-.096-.195-.186t-.205-.177q-.104-.085-.213-.166-.108-.08-.22-.155-.113-.075-.228-.145-.116-.069-.235-.133-.12-.063-.241-.12-.123-.059-.247-.11-.125-.052-.252-.097t-.256-.085-.26-.072-.264-.06-.266-.045-.268-.034-.27-.02Q8.136 2.5 8 2.5t-.27.007q-.135.006-.27.02-.133.013-.267.033t-.266.046-.263.059-.26.072q-.13.039-.257.085-.127.045-.252.097-.124.051-.247.11-.122.057-.24.12-.12.064-.236.133-.115.07-.228.145-.112.075-.22.155-.109.08-.213.166-.105.086-.205.177-.1.09-.195.186-.096.095-.186.195t-.177.205q-.085.104-.166.213-.08.108-.155.22-.075.113-.145.228-.069.116-.133.235-.063.12-.12.241-.059.123-.11.247-.052.125-.097.252t-.085.256-.072.26q-.033.132-.06.264t-.045.266-.034.268-.02.27Q2.5 7.864 2.5 8t.007.27q.006.135.02.27.013.133.033.267t.046.266.059.263.072.26q.039.13.085.257.045.127.097.252.051.124.11.247.057.122.12.24.064.12.133.236.07.115.145.228.075.112.155.22.08.109.166.213t.177.205.186.195q.095.096.195.186t.205.177q.104.085.213.166.108.08.22.155.113.075.228.144.116.07.235.134.12.063.241.12.123.059.247.11.125.052.252.098.127.045.256.084.13.04.26.072.132.033.264.06t.266.046.268.032.27.02q.134.007.269.007"></path></svg></div><!----><div class="s-trans cursor-pointer rounded-[6px] p-[4px] leading-[0] transition-colors hover:bg-color-m2/[0.08]"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="hi-iconify text-[16px] leading-[16px] text-color-t2 text-[16px] leading-[16px] text-color-t2 iconify iconify--i" width="1em" height="1em" viewBox="0 0 16 16"><path fill="currentColor" d="M9.22 3.22a.75.75 0 011.06 0l4.25 4.25a1 1 0 01.064.072l.004.006.021.032.029.041.004.01.009.014.013.03.017.033.008.022.006.013.005.018.013.04.006.027.005.016.002.019.007.035.002.027.003.023v.023L14.75 8l-.002.029v.023l-.003.021-.002.029-.007.034-.002.02-.005.015-.006.028-.013.039-.005.02-.006.011-.008.023-.017.032-.013.03-.009.014-.004.01-.029.041-.016.027-.073.084-4.25 4.25a.75.75 0 01-1.06-1.06l2.968-2.97H2a.75.75 0 01-.743-.648L1.25 8A.75.75 0 012 7.25h10.189l-2.97-2.97a.75.75 0 01-.072-.976z"></path></svg></div><!----><div class="s-trans cursor-pointer rounded-[6px] p-[4px] leading-[0] transition-colors hover:bg-color-m2/[0.08]"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="hi-iconify text-[16px] leading-[16px] text-color-t2 text-[16px] leading-[16px] text-color-t2 iconify iconify--i" width="1em" height="1em" viewBox="0 0 16 16"><g fill="currentColor"><defs><clippath id="iconifyVue1"><rect width="16" height="16" rx="0"></rect></clippath></defs><g clip-path="url(#iconifyVue1)"><path d="M14.096 1.904a3.087 3.087 0 010 4.366l-8.09 8.09c-.41.41-.965.64-1.544.64H2.746A1.746 1.746 0 011 13.254v-1.716c0-.579.23-1.134.64-1.543l8.09-8.09a3.087 3.087 0 014.366 0M8.536 5l-5.785 5.785a.86.86 0 00-.251.605v1.682c0 .236.192.428.428.428H4.61c.227 0 .445-.09.605-.25L11 7.463zm2.139-2.015L9.5 4.159 11.84 6.5l1.175-1.174a1.656 1.656 0 00-2.34-2.341"></path></g></g></svg></div><!----><div class="s-trans cursor-pointer rounded-[6px] p-[4px] leading-[0] transition-colors hover:bg-color-m2/[0.08]"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="hi-iconify text-[16px] leading-[16px] text-color-t2 text-[16px] leading-[16px] text-color-t2 iconify iconify--i" width="1em" height="1em" viewBox="0 0 16 16"><g fill="currentColor"><path fill-rule="evenodd" d="M13.465 1.4c-.489-.26-.973-.4-2.31-.4h-6.31c-1.336 0-1.821.14-2.31.4A2.73 2.73 0 001.4 2.536c-.261.488-.4.973-.4 2.309v6.31c0 1.337.14 1.821.4 2.31.262.49.646.873 1.135 1.134.489.262.974.401 2.31.401h6.31c1.337 0 1.821-.14 2.31-.4a2.73 2.73 0 001.134-1.135c.262-.489.401-.973.401-2.31v-6.31c0-1.336-.14-1.821-.4-2.31A2.73 2.73 0 0013.464 1.4M4.643 2.5h6.714l.183.004c.694.015.953.078 1.218.22.227.121.397.29.519.518.165.309.223.611.223 1.604v6.308c0 .993-.058 1.295-.223 1.604a1.23 1.23 0 01-.52.519c-.308.165-.61.223-1.603.223H4.846c-.993 0-1.295-.058-1.604-.223a1.23 1.23 0 01-.519-.52c-.153-.286-.214-.567-.222-1.4V4.643c.008-.833.07-1.114.222-1.4a1.23 1.23 0 01.52-.52c.286-.153.567-.214 1.4-.222"></path><path d="M3 8h5v5H4a1 1 0 01-1-1Zm5-5h4a1 1 0 011 1v4H8Z"></path></g></svg></div><!----><div class="s-trans cursor-pointer rounded-[6px] p-[4px] leading-[0] transition-colors hover:bg-color-m2/[0.08]"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="hi-iconify text-[16px] leading-[16px] text-color-t2 text-[16px] leading-[16px] text-color-t2 iconify iconify--i" width="1em" height="1em" viewBox="0 0 16 16"><path fill="currentColor" d="M13.25 2a.75.75 0 010 1.5h-4.5v9.75a.75.75 0 01-.648.743L8 14a.75.75 0 01-.75-.75V3.5h-4.5a.75.75 0 01-.743-.648L2 2.75A.75.75 0 012.75 2z"></path></svg></div><!----></span><i class="mx-[4px] inline-block h-[12px] w-0" style="border: 1.2px solid rgb(238, 238, 238);"></i><span class="hover:border-transparent mx-[8px] inline-flex h-[24px] cursor-pointer items-center justify-center whitespace-nowrap rounded-[6px] border border-color-m2/[0.06] px-[8px] text-[12px] font-medium leading-[16px] text-color-blue transition-colors hover:bg-color-blue/[0.06]"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="hi-iconify mr-[4px] text-[16px] leading-[16px] mr-[4px] text-[16px] leading-[16px] iconify iconify--i" width="1em" height="1em" viewBox="0 0 16 16"><g fill="currentColor"><path fill-rule="evenodd" d="M15 8A7 7 0 101 8v3.154c0 1.338.14 1.822.4 2.311.262.49.646.873 1.135 1.134.489.262.974.401 2.31.401H8a7 7 0 007-7M2.5 8A5.5 5.5 0 118 13.5H4.846c-.993 0-1.295-.058-1.604-.223a1.23 1.23 0 01-.519-.52c-.153-.286-.214-.567-.222-1.4z"></path><path d="M10.25 7.25a.75.75 0 010 1.5h-4.5a.75.75 0 010-1.5z"></path><path d="M8.75 10.25a.75.75 0 01-1.5 0v-4.5a.75.75 0 011.5 0z"></path></g></svg> 对话 </span><!----><i class="mx-[4px] inline-block h-[12px] w-0" style="border: 1.2px solid rgb(238, 238, 238);"></i><span class="ml-[4px] flex items-center gap-x-[8px]"><div class="s-trans cursor-pointer rounded-[6px] p-[4px] leading-[0] transition-colors hover:bg-color-m2/[0.06]"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="hi-iconify text-[16px] leading-[16px] text-color-t2 text-[16px] leading-[16px] text-color-t2 iconify iconify--i" width="1em" height="1em" viewBox="0 0 16 16"><g fill="currentColor"><path d="M9.125 4.25a4.875 4.875 0 110 9.75H3.75a.75.75 0 010-1.5h5.375a3.375 3.375 0 000-6.75H3.75a.75.75 0 010-1.5z"></path><path d="M4.47 2.22a.75.75 0 111.06 1.06L3.783 5.027l1.774 1.971a.75.75 0 01.022.98l-.077.08a.75.75 0 01-1.06-.056l-2.25-2.5A.75.75 0 012.22 4.47z"></path></g></svg></div><!----><div class="s-trans cursor-pointer rounded-[6px] p-[4px] leading-[0] transition-colors hover:bg-color-m2/[0.06]"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="hi-iconify text-[16px] leading-[16px] text-color-t2 text-[16px] leading-[16px] text-color-t2 iconify iconify--i" width="1em" height="1em" viewBox="0 0 16 16"><g fill="currentColor"><path d="M15 9.75v.936c0 .926-.092 1.4-.356 1.895a2.57 2.57 0 01-1.063 1.063c-.494.264-.969.356-1.895.356H4.314c-.926 0-1.4-.092-1.895-.356a2.57 2.57 0 01-1.063-1.063c-.242-.453-.34-.89-.354-1.673L1.001 9.75a.75.75 0 111.499 0v.936c0 .636.038.893.145 1.12l.033.067q.157.292.449.449c.247.132.487.178 1.187.178h7.372l.339-.005c.448-.015.646-.065.848-.173q.292-.157.449-.449c.132-.247.178-.487.178-1.187V9.75a.75.75 0 011.5 0"></path><path d="M8 1a.75.75 0 01.75.75v7a.75.75 0 01-1.5 0v-7A.75.75 0 018 1"></path><path d="M10.741 5.199A.75.75 0 0111.76 6.3l-3.25 3a.75.75 0 01-1.018 0l-3.25-3A.75.75 0 015.26 5.2L8 7.729z"></path></g></svg></div><!----><div class="s-trans cursor-pointer rounded-[6px] p-[4px] leading-[0] transition-colors hover:bg-color-m2/[0.06]"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="hi-iconify text-[16px] leading-[16px] text-color-t2 text-[16px] leading-[16px] text-color-t2 iconify iconify--i" width="1em" height="1em" viewBox="0 0 16 16"><path fill="currentColor" d="M4.28 3.22 8 6.939l3.72-3.72a.75.75 0 01.976-.072l.084.073a.75.75 0 010 1.06L9.061 8l3.72 3.72a.75.75 0 01-1.061 1.06L8 9.061l-3.72 3.72a.75.75 0 01-.976.072l-.084-.073a.75.75 0 010-1.06L6.939 8l-3.72-3.72A.75.75 0 114.28 3.22"></path></svg></div><!----><div class="s-trans cursor-pointer rounded-[6px] p-[4px] leading-[0] transition-colors hover:bg-color-m2/[0.06]"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="hi-iconify text-[16px] leading-[16px] text-color-t2 text-[16px] leading-[16px] text-color-t2 iconify iconify--i" width="1em" height="1em" viewBox="0 0 16 16"><path fill="currentColor" d="M13.712 3.228a.75.75 0 011.076 1.044l-7.25 7.5a.75.75 0 01-1.083-.007l-4.25-4.5a.75.75 0 011.09-1.03l3.712 3.93z"></path></svg></div><!----></span></div><!----></div></div></template></wetab-chat-screenshot><wetab-chat-contextmenu class="wetab-root" style="position: relative; z-index: 2147483647;"><template shadowrootmode="open"><link rel="stylesheet" href="chrome-extension://bpelnogcookhocnaokfpoeinibimbeff/content.css"><style id="theme_style">
+  :host {
+    --color-black:0 0 0;--color-white:255 255 255;--color-blue:74 122 255;--color-green:52 199 89;--color-yellow:255 149 0;--color-orange:255 155 48;--color-red:255 77 79;--color-t1:28 28 30;--color-t2:58 58 60;--color-t3:142 142 148;--color-t4:199 199 204;--color-t5:255 255 255;--color-b1:209 209 214;--color-b2:229 229 234;--color-b3:248 248 248;--color-b4:255 255 255;--color-b5:255 255 255;--color-m1:255 255 255;--color-m2:0 0 0;--color-todo-t1:47 87 255;--color-todo-t2:83 147 255;--color-note-t1:192 131 93;--color-note-t2:198 174 159;--color-calc-t1:255 255 255;--color-calc-t2:200 200 204;--color-calc-t3:142 142 148;--color-calc-t4:94 94 98;--color-calc-b1:75 78 84;--color-calc-b2:50 52 57;--color-calc-b3:34 36 39;--color-calc-l1:254 189 95;--color-calc-l2:251 132 54;--color-calc-l3:96 99 107;--color-calc-l4:58 60 66;--color-calc-l6:32 33 38;--color-calc-l7:81 84 90;--color-calc-l5:63 65 72;--color-calc-l8:72 74 79;--color-calc-l0:40 41 45;--color-calc-l9:252 163 36;--color-calc-yellow:240 168 16;--color-calendar-red:255 77 79;--color-calendar-b1:255 101 101;--color-calendar-b2:255 246 241;--color-worldcup-t1:168 238 65;--color-rate-t1:28 28 30;--color-rate-t2:58 58 60;--color-rate-t3:141 142 148;--color-rate-t4:109 147 229;--color-rate-b1:255 255 255;--color-rate-b2:248 248 248;--color-rate-b3:34 36 39;--color-rate-b4:55 69 157;--color-rate-b5:238 240 239;--color-rate-l1:70 154 255;--color-rate-l2:72 90 188;--color-game-b1:38 42 53;--color-game-b2:70 74 88;--color-game-b3:23 26 34;--color-game-b4:44 47 59;--color-game-b5:20 174 60;--color-game-t1:200 200 204;--color-game-t2:142 142 148;--color-movie-b1:94 104 71;--color-clock-b1:22 21 28;--color-wclock-b1:19 20 21;--color-wclock-t1:37 216 27;--color-wclock-t2:47 142 42;--color-wclock-t3:30 82 27;--color-bookmark-t1:98 173 91;--color-bookmark-b1:248 248 248;--color-bookmark-b2:255 255 255;--color-record-t1:255 115 48;--color-image-t1:68 10 214;--color-image-b1:0 0 0;--color-image-b2:255 255 255;--color-image-b4:17 17 17;--color-translate-green:36 161 81;--color-tomato-work:244 78 33;--color-tomato-rest:54 168 106;--color-write-t1:69 116 246;--color-write-blue:48 101 246;--color-settings-blue:0 122 255
+   }
+  </style><div class="module-app" data-v-app=""><!----></div></template></wetab-chat-contextmenu></div></body></html>
