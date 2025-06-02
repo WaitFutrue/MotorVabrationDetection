@@ -2,8 +2,8 @@
 
 > 以截图形式呈现
 
-如下，第一张采用相对地址，第二张采用绝对地址，
+如下，第一张采用中文地址，第二张采用英文地址，
 
-![web](../../../5_网络名称.png)
+![web](../../5_图片存储/网页名称.png)
 
-![WED](C:\Users\zhang\Desktop\MotorVabrationDetection\Docs\5_图片存储\网页名称.png)
+![WED](../../5_IMG/网页名称.png)
