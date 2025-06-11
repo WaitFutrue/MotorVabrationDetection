@@ -5,7 +5,7 @@
 %     data_table = readtable('0_unpowered_1.csv'); % 如果有表头，使用readtable
 %     data = table2array(data_table); % 转换为数值矩阵
 % end
-data = readmatrix('9_1500RPM_3.csv'); % 尝试读取纯数值数据
+data = readmatrix('0_unpowered_1.csv'); % 尝试读取纯数值数据
 
 % 提取三轴数据
 x = data(:,1);

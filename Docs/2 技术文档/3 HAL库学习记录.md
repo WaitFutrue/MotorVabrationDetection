@@ -6,6 +6,8 @@
 
 - 选中DSP，✔加载LIB——若文件夹中出现**中间件**文件夹则说明成功)
   
+  > 此过程总共有两个√，同样的位置，第一次选择库，第二次对DSP lib 打✔
+  
   <img title="" src="https://i-blog.csdnimg.cn/blog_migrate/01b4421a088a19218ef1dbc6ba74a682.png" alt="" width="656">
 
 ## 配置 Project Manager
